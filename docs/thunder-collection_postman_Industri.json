@@ -1,0 +1,26 @@
+{
+    "info": {
+        "_postman_id": "ca35619f-26bf-47c4-8d9e-3fd9183bd296",
+        "name": "Industri",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": ""
+    },
+    "item": [
+        {
+            "name": "localhost:5084/tes",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "localhost:5084/tes",
+                    "path": [
+                        "tes"
+                    ],
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "5084"
+                }
+            }
+        }
+    ]
+}

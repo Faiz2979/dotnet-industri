@@ -1,0 +1,6 @@
+@industri_HostAddress = http://localhost:5084
+
+GET {{industri_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
