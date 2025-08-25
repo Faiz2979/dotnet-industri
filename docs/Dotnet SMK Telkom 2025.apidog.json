@@ -767,7 +767,7 @@
                     "id": 29279676,
                     "type": "TEST_CASE",
                     "path": "/questions/question-5",
-                    "name": "Days Late Bellow <=5",
+                    "name": "Days Late <=5",
                     "responseId": 29957724,
                     "parameters": {
                       "query": [
