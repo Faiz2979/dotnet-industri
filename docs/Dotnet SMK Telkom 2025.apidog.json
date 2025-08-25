@@ -1,1935 +1,423 @@
 {
-  "apidogProject": "1.0.0",
-  "$schema": {
-    "app": "apidog",
-    "type": "project",
-    "version": "1.2.0"
-  },
+  "openapi": "3.0.1",
   "info": {
-    "name": "Dotnet SMK Telkom 2025",
+    "title": "Dotnet SMK Telkom 2025",
     "description": "",
-    "mockRule": {
-      "rules": [],
-      "enableSystemRule": true
-    }
+    "version": "1.0.0"
   },
-  "apiCollection": [
+  "tags": [
     {
-      "name": "Root",
-      "id": 4694946,
-      "auth": {},
-      "securityScheme": {},
-      "parentId": 0,
-      "serverId": "",
-      "description": "",
-      "identityPattern": {
-        "httpApi": {
-          "type": "methodAndPath",
-          "bodyType": "",
-          "fields": []
-        }
-      },
-      "shareSettings": {},
-      "visibility": "SHARED",
-      "moduleId": 865902,
-      "preProcessors": [
-        {
-          "id": "inheritProcessors",
-          "type": "inheritProcessors",
-          "data": {}
-        }
-      ],
-      "postProcessors": [
-        {
-          "id": "inheritProcessors",
-          "type": "inheritProcessors",
-          "data": {}
-        }
-      ],
-      "inheritPostProcessors": {},
-      "inheritPreProcessors": {},
-      "items": [
-        {
-          "name": "Questions",
-          "id": 4694947,
-          "auth": {},
-          "securityScheme": {},
-          "parentId": 0,
-          "serverId": "",
-          "description": "",
-          "identityPattern": {
-            "httpApi": {
-              "type": "inherit",
-              "bodyType": "",
-              "fields": []
+      "name": "Questions"
+    }
+  ],
+  "paths": {
+    "/questions/question-1": {
+      "get": {
+        "summary": "Question 1 - Discount calculation with error handling",
+        "deprecated": false,
+        "description": "Calculates final price after applying discount. Requires proper error handling for invalid discount values.",
+        "tags": [
+          "Questions"
+        ],
+        "parameters": [
+          {
+            "name": "discount",
+            "in": "query",
+            "description": "Discount amount as string (should be convertible to integer)",
+            "required": true,
+            "example": "a",
+            "schema": {
+              "type": "string"
             }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Question1Response"
+                }
+              }
+            },
+            "headers": {}
           },
-          "shareSettings": {},
-          "visibility": "INHERITED",
-          "moduleId": 865902,
-          "preProcessors": [
-            {
-              "id": "inheritProcessors",
-              "type": "inheritProcessors",
-              "data": {}
-            }
-          ],
-          "postProcessors": [
-            {
-              "id": "inheritProcessors",
-              "type": "inheritProcessors",
-              "data": {}
-            }
-          ],
-          "inheritPostProcessors": {},
-          "inheritPreProcessors": {},
-          "items": [
-            {
-              "name": "Question 1 - Discount calculation with error handling",
-              "api": {
-                "id": "20641131",
-                "method": "get",
-                "path": "/questions/question-1",
-                "parameters": {
-                  "query": [
-                    {
-                      "id": "rSEFGeUU3X",
-                      "name": "discount",
-                      "required": true,
-                      "description": "Discount amount as string (should be convertible to integer)",
-                      "type": "string",
-                      "schema": {
-                        "type": "string"
-                      },
-                      "enable": true,
-                      "example": "a"
-                    }
-                  ],
-                  "path": [],
-                  "cookie": [],
-                  "header": []
-                },
-                "auth": {},
-                "securityScheme": {},
-                "commonParameters": {
-                  "query": [],
-                  "body": [],
-                  "cookie": [],
-                  "header": []
-                },
-                "responses": [
-                  {
-                    "id": "29957716",
-                    "code": 200,
-                    "name": "OK",
-                    "headers": [],
-                    "jsonSchema": {
-                      "$ref": "#/definitions/8923481"
-                    },
-                    "description": "Successful response",
-                    "contentType": "json",
-                    "mediaType": "application/json",
-                    "oasExtensions": ""
-                  },
-                  {
-                    "id": "29957717",
-                    "code": 400,
-                    "name": "Bad Request",
-                    "headers": [],
-                    "jsonSchema": {
-                      "$ref": "#/definitions/8923488"
-                    },
-                    "description": "Bad request - invalid discount value",
-                    "contentType": "json",
-                    "mediaType": "application/json",
-                    "oasExtensions": ""
-                  }
-                ],
-                "responseExamples": [],
-                "requestBody": {
-                  "type": "none",
-                  "parameters": [],
-                  "mediaType": "",
-                  "examples": [],
-                  "oasExtensions": ""
-                },
-                "description": "Calculates final price after applying discount. Requires proper error handling for invalid discount values.",
-                "tags": [
-                  "Questions"
-                ],
-                "status": "released",
-                "serverId": "",
-                "operationId": "",
-                "sourceUrl": "",
-                "ordering": 0,
-                "cases": [
-                  {
-                    "id": 29279697,
-                    "type": "TEST_CASE",
-                    "path": "/questions/question-1",
-                    "name": "If Discount using String",
-                    "responseId": 29957716,
-                    "parameters": {
-                      "query": [
-                        {
-                          "id": "rSEFGeUU3X",
-                          "relatedName": "discount",
-                          "name": "discount",
-                          "value": "a",
-                          "type": "string",
-                          "description": "Discount amount as string (should be convertible to integer)",
-                          "enable": true,
-                          "isDelete": false
-                        }
-                      ],
-                      "header": [],
-                      "cookie": [],
-                      "path": []
-                    },
-                    "commonParameters": {
-                      "query": [],
-                      "body": [],
-                      "header": [],
-                      "cookie": []
-                    },
-                    "requestBody": {
-                      "parameters": [],
-                      "type": "none",
-                      "data": "",
-                      "generateMode": "normal"
-                    },
-                    "auth": {},
-                    "securityScheme": {
-                      "scopes": {}
-                    },
-                    "advancedSettings": {
-                      "disabledSystemHeaders": {},
-                      "isDefaultUrlEncoding": 1
-                    },
-                    "requestResult": null,
-                    "visibility": "INHERITED",
-                    "moduleId": 865902,
-                    "categoryId": 109986,
-                    "preProcessors": [
-                      {
-                        "type": "placeholder",
-                        "renderType": "dynamicValueDivider",
-                        "defaultEnable": false,
-                        "enable": false
-                      }
-                    ],
-                    "postProcessors": [],
-                    "inheritPostProcessors": {},
-                    "inheritPreProcessors": {}
-                  },
-                  {
-                    "id": 29279732,
-                    "type": "TEST_CASE",
-                    "path": "/questions/question-1",
-                    "name": "If Discound Using Number",
-                    "responseId": 29957716,
-                    "parameters": {
-                      "query": [
-                        {
-                          "id": "rSEFGeUU3X",
-                          "relatedName": "discount",
-                          "name": "discount",
-                          "value": "10",
-                          "type": "string",
-                          "description": "Discount amount as string (should be convertible to integer)",
-                          "enable": true,
-                          "isDelete": false
-                        }
-                      ],
-                      "header": [],
-                      "cookie": [],
-                      "path": []
-                    },
-                    "commonParameters": {
-                      "query": [],
-                      "body": [],
-                      "header": [],
-                      "cookie": []
-                    },
-                    "requestBody": {
-                      "parameters": [],
-                      "type": "none",
-                      "data": "",
-                      "generateMode": "normal"
-                    },
-                    "auth": {},
-                    "securityScheme": {
-                      "scopes": {}
-                    },
-                    "advancedSettings": {
-                      "disabledSystemHeaders": {},
-                      "isDefaultUrlEncoding": 1
-                    },
-                    "requestResult": null,
-                    "visibility": "INHERITED",
-                    "moduleId": 865902,
-                    "categoryId": 109986,
-                    "preProcessors": [
-                      {
-                        "type": "placeholder",
-                        "renderType": "dynamicValueDivider",
-                        "defaultEnable": false,
-                        "enable": false
-                      }
-                    ],
-                    "postProcessors": [],
-                    "inheritPostProcessors": {},
-                    "inheritPreProcessors": {}
-                  }
-                ],
-                "mocks": [],
-                "customApiFields": "{}",
-                "advancedSettings": {
-                  "disabledSystemHeaders": {}
-                },
-                "mockScript": {},
-                "codeSamples": [],
-                "commonResponseStatus": {},
-                "responseChildren": [
-                  "BLANK.29957716",
-                  "BLANK.29957717"
-                ],
-                "visibility": "INHERITED",
-                "moduleId": 865902,
-                "oasExtensions": "",
-                "type": "http",
-                "preProcessors": [],
-                "postProcessors": [],
-                "inheritPostProcessors": {},
-                "inheritPreProcessors": {}
-              }
-            },
-            {
-              "name": "Question 2 - Null reference handling",
-              "api": {
-                "id": "20641132",
-                "method": "get",
-                "path": "/questions/question-2",
-                "parameters": {
-                  "path": [],
-                  "query": [],
-                  "cookie": [],
-                  "header": []
-                },
-                "auth": {},
-                "securityScheme": {},
-                "commonParameters": {},
-                "responses": [
-                  {
-                    "id": "29957718",
-                    "code": 200,
-                    "name": "OK",
-                    "headers": [],
-                    "jsonSchema": {
-                      "$ref": "#/definitions/8923482"
-                    },
-                    "description": "Successful response",
-                    "contentType": "json",
-                    "mediaType": "application/json",
-                    "oasExtensions": ""
-                  },
-                  {
-                    "id": "29957719",
-                    "code": 400,
-                    "name": "Bad Request",
-                    "headers": [],
-                    "jsonSchema": {
-                      "$ref": "#/definitions/8923488"
-                    },
-                    "description": "Bad request - null user data",
-                    "contentType": "json",
-                    "mediaType": "application/json",
-                    "oasExtensions": ""
-                  }
-                ],
-                "responseExamples": [],
-                "requestBody": {
-                  "type": "none",
-                  "parameters": [],
-                  "oasExtensions": "",
-                  "required": false,
-                  "additionalContentTypes": []
-                },
-                "description": "Gets user initial from external source. Requires proper null handling.",
-                "tags": [
-                  "Questions"
-                ],
-                "status": "released",
-                "serverId": "",
-                "operationId": "",
-                "sourceUrl": "",
-                "ordering": 6,
-                "cases": [],
-                "mocks": [],
-                "customApiFields": "{}",
-                "advancedSettings": {
-                  "disabledSystemHeaders": {}
-                },
-                "mockScript": {},
-                "codeSamples": [],
-                "commonResponseStatus": {},
-                "responseChildren": [],
-                "visibility": "INHERITED",
-                "moduleId": 865902,
-                "oasExtensions": "",
-                "type": "http",
-                "preProcessors": [],
-                "postProcessors": [],
-                "inheritPostProcessors": {},
-                "inheritPreProcessors": {}
-              }
-            },
-            {
-              "name": "Question 3 - Discount formula correction",
-              "api": {
-                "id": "20641133",
-                "method": "post",
-                "path": "/questions/question-3",
-                "parameters": {
-                  "query": [],
-                  "path": [],
-                  "cookie": [],
-                  "header": []
-                },
-                "auth": {},
-                "securityScheme": {},
-                "commonParameters": {
-                  "query": [],
-                  "body": [],
-                  "cookie": [],
-                  "header": []
-                },
-                "responses": [
-                  {
-                    "id": "29957720",
-                    "code": 200,
-                    "name": "OK",
-                    "headers": [],
-                    "jsonSchema": {
-                      "$ref": "#/definitions/8923484"
-                    },
-                    "description": "Successful response",
-                    "contentType": "json",
-                    "mediaType": "application/json",
-                    "oasExtensions": ""
-                  },
-                  {
-                    "id": "29957721",
-                    "code": 400,
-                    "name": "Bad Request",
-                    "headers": [],
-                    "jsonSchema": {
-                      "$ref": "#/definitions/8923488"
-                    },
-                    "description": "Bad request - invalid input",
-                    "contentType": "json",
-                    "mediaType": "application/json",
-                    "oasExtensions": ""
-                  }
-                ],
-                "responseExamples": [],
-                "requestBody": {
-                  "type": "application/json",
-                  "parameters": [],
-                  "jsonSchema": {
-                    "$ref": "#/definitions/8923483"
-                  },
-                  "mediaType": "",
-                  "examples": [
-                    {
-                      "mediaType": "application/json",
-                      "value": "{\r\n    \"price\": 100,\r\n    \"discountPercent\": 100\r\n}"
-                    },
-                    {
-                      "mediaType": "application/xml",
-                      "value": ""
-                    }
-                  ],
-                  "oasExtensions": ""
-                },
-                "description": "Calculates discount based on percentage. Formula needs to be corrected.",
-                "tags": [
-                  "Questions"
-                ],
-                "status": "released",
-                "serverId": "",
-                "operationId": "",
-                "sourceUrl": "",
-                "ordering": 12,
-                "cases": [],
-                "mocks": [],
-                "customApiFields": "{}",
-                "advancedSettings": {
-                  "disabledSystemHeaders": {}
-                },
-                "mockScript": {},
-                "codeSamples": [],
-                "commonResponseStatus": {},
-                "responseChildren": [
-                  "BLANK.29957720",
-                  "BLANK.29957721"
-                ],
-                "visibility": "INHERITED",
-                "moduleId": 865902,
-                "oasExtensions": "",
-                "type": "http",
-                "preProcessors": [],
-                "postProcessors": [],
-                "inheritPostProcessors": {},
-                "inheritPreProcessors": {}
-              }
-            },
-            {
-              "name": "Question 4 - Order discount calculation",
-              "api": {
-                "id": "20641134",
-                "method": "post",
-                "path": "/questions/question-4",
-                "parameters": {
-                  "query": [],
-                  "path": [],
-                  "cookie": [],
-                  "header": []
-                },
-                "auth": {},
-                "securityScheme": {},
-                "commonParameters": {
-                  "query": [],
-                  "body": [],
-                  "cookie": [],
-                  "header": []
-                },
-                "responses": [
-                  {
-                    "id": "29957722",
-                    "code": 200,
-                    "name": "OK",
-                    "headers": [],
-                    "jsonSchema": {
-                      "$ref": "#/definitions/8923486"
-                    },
-                    "description": "Successful response",
-                    "contentType": "json",
-                    "mediaType": "application/json",
-                    "oasExtensions": ""
-                  },
-                  {
-                    "id": "29957723",
-                    "code": 400,
-                    "name": "Bad Request",
-                    "headers": [],
-                    "jsonSchema": {
-                      "$ref": "#/definitions/8923488"
-                    },
-                    "description": "Bad request - invalid input",
-                    "contentType": "json",
-                    "mediaType": "application/json",
-                    "oasExtensions": ""
-                  }
-                ],
-                "responseExamples": [],
-                "requestBody": {
-                  "type": "application/json",
-                  "parameters": [],
-                  "jsonSchema": {
-                    "$ref": "#/definitions/8923485"
-                  },
-                  "mediaType": "application/json",
-                  "examples": [
-                    {
-                      "mediaType": "application/json",
-                      "value": "{\r\n    \"price\": 10,\r\n    \"quantity\": 10,\r\n    \"isMember\": true\r\n}"
-                    }
-                  ],
-                  "oasExtensions": ""
-                },
-                "description": "Calculates final price for orders with member and bulk discounts.",
-                "tags": [
-                  "Questions"
-                ],
-                "status": "released",
-                "serverId": "",
-                "operationId": "",
-                "sourceUrl": "",
-                "ordering": 18,
-                "cases": [
-                  {
-                    "id": 29279815,
-                    "type": "TEST_CASE",
-                    "path": "/questions/question-4",
-                    "name": "isMember true",
-                    "responseId": 29957722,
-                    "parameters": {
-                      "query": [],
-                      "header": [],
-                      "cookie": [],
-                      "path": []
-                    },
-                    "commonParameters": {
-                      "query": [],
-                      "body": [],
-                      "header": [],
-                      "cookie": []
-                    },
-                    "requestBody": {
-                      "parameters": [],
-                      "type": "application/json",
-                      "data": "{\n    \"price\": 10,\n    \"quantity\": 10,\n    \"isMember\": true\n}",
-                      "jsonSchema": {
-                        "$ref": "#/definitions/8923485"
-                      },
-                      "generateMode": "normal"
-                    },
-                    "auth": {},
-                    "securityScheme": {
-                      "scopes": {}
-                    },
-                    "advancedSettings": {
-                      "disabledSystemHeaders": {},
-                      "isDefaultUrlEncoding": 1
-                    },
-                    "requestResult": null,
-                    "visibility": "INHERITED",
-                    "moduleId": 865902,
-                    "categoryId": 109986,
-                    "preProcessors": [
-                      {
-                        "type": "placeholder",
-                        "renderType": "dynamicValueDivider",
-                        "defaultEnable": false,
-                        "enable": false
-                      }
-                    ],
-                    "postProcessors": [],
-                    "inheritPostProcessors": {},
-                    "inheritPreProcessors": {}
-                  },
-                  {
-                    "id": 29279816,
-                    "type": "TEST_CASE",
-                    "path": "/questions/question-4",
-                    "name": "isMember False",
-                    "responseId": 29957722,
-                    "parameters": {
-                      "query": [],
-                      "header": [],
-                      "cookie": [],
-                      "path": []
-                    },
-                    "commonParameters": {
-                      "query": [],
-                      "body": [],
-                      "header": [],
-                      "cookie": []
-                    },
-                    "requestBody": {
-                      "parameters": [],
-                      "type": "application/json",
-                      "data": "{\n    \"price\": 10,\n    \"quantity\": 10,\n    \"isMember\": false\n}",
-                      "jsonSchema": {
-                        "$ref": "#/definitions/8923485"
-                      },
-                      "generateMode": "normal"
-                    },
-                    "auth": {},
-                    "securityScheme": {
-                      "scopes": {}
-                    },
-                    "advancedSettings": {
-                      "disabledSystemHeaders": {},
-                      "isDefaultUrlEncoding": 1
-                    },
-                    "requestResult": null,
-                    "visibility": "INHERITED",
-                    "moduleId": 865902,
-                    "categoryId": 109986,
-                    "preProcessors": [
-                      {
-                        "type": "placeholder",
-                        "renderType": "dynamicValueDivider",
-                        "defaultEnable": false,
-                        "enable": false
-                      }
-                    ],
-                    "postProcessors": [],
-                    "inheritPostProcessors": {},
-                    "inheritPreProcessors": {}
-                  }
-                ],
-                "mocks": [],
-                "customApiFields": "{}",
-                "advancedSettings": {
-                  "disabledSystemHeaders": {}
-                },
-                "mockScript": {},
-                "codeSamples": [],
-                "commonResponseStatus": {},
-                "responseChildren": [
-                  "BLANK.29957722",
-                  "BLANK.29957723"
-                ],
-                "visibility": "INHERITED",
-                "moduleId": 865902,
-                "oasExtensions": "",
-                "type": "http",
-                "preProcessors": [],
-                "postProcessors": [],
-                "inheritPostProcessors": {},
-                "inheritPreProcessors": {}
-              }
-            },
-            {
-              "name": "Question 5 - Library late fee calculation",
-              "api": {
-                "id": "20641135",
-                "method": "get",
-                "path": "/questions/question-5",
-                "parameters": {
-                  "query": [
-                    {
-                      "id": "anFO1JPL5X",
-                      "name": "daysLate",
-                      "required": true,
-                      "description": "Number of days the book is late",
-                      "type": "integer",
-                      "schema": {
-                        "type": "integer",
-                        "minimum": 0
-                      },
-                      "enable": true,
-                      "example": "5"
-                    }
-                  ],
-                  "path": [],
-                  "cookie": [],
-                  "header": []
-                },
-                "auth": {},
-                "securityScheme": {},
-                "commonParameters": {
-                  "query": [],
-                  "body": [],
-                  "cookie": [],
-                  "header": []
-                },
-                "responses": [
-                  {
-                    "id": "29957724",
-                    "code": 200,
-                    "name": "OK",
-                    "headers": [],
-                    "jsonSchema": {
-                      "$ref": "#/definitions/8923487"
-                    },
-                    "description": "Successful response",
-                    "contentType": "json",
-                    "mediaType": "application/json",
-                    "oasExtensions": ""
-                  },
-                  {
-                    "id": "29957725",
-                    "code": 400,
-                    "name": "Bad Request",
-                    "headers": [],
-                    "jsonSchema": {
-                      "$ref": "#/definitions/8923488"
-                    },
-                    "description": "Bad request - invalid days late value",
-                    "contentType": "json",
-                    "mediaType": "application/json",
-                    "oasExtensions": ""
-                  }
-                ],
-                "responseExamples": [],
-                "requestBody": {
-                  "type": "none",
-                  "parameters": [],
-                  "mediaType": "",
-                  "examples": [],
-                  "oasExtensions": ""
-                },
-                "description": "Calculates late fee based on number of days late.",
-                "tags": [
-                  "Questions"
-                ],
-                "status": "released",
-                "serverId": "",
-                "operationId": "",
-                "sourceUrl": "",
-                "ordering": 24,
-                "cases": [
-                  {
-                    "id": 29279676,
-                    "type": "TEST_CASE",
-                    "path": "/questions/question-5",
-                    "name": "Days Late <=5",
-                    "responseId": 29957724,
-                    "parameters": {
-                      "query": [
-                        {
-                          "id": "anFO1JPL5X",
-                          "relatedName": "daysLate",
-                          "name": "daysLate",
-                          "value": "3",
-                          "type": "integer",
-                          "description": "Number of days the book is late",
-                          "enable": true,
-                          "isDelete": false
-                        }
-                      ],
-                      "header": [],
-                      "cookie": [],
-                      "path": []
-                    },
-                    "commonParameters": {
-                      "query": [],
-                      "body": [],
-                      "header": [],
-                      "cookie": []
-                    },
-                    "requestBody": {
-                      "parameters": [],
-                      "type": "none",
-                      "data": "",
-                      "generateMode": "normal"
-                    },
-                    "auth": {},
-                    "securityScheme": {
-                      "scopes": {}
-                    },
-                    "advancedSettings": {
-                      "disabledSystemHeaders": {},
-                      "isDefaultUrlEncoding": 1
-                    },
-                    "requestResult": null,
-                    "visibility": "INHERITED",
-                    "moduleId": 865902,
-                    "categoryId": 109986,
-                    "preProcessors": [
-                      {
-                        "type": "placeholder",
-                        "renderType": "dynamicValueDivider",
-                        "defaultEnable": false,
-                        "enable": false
-                      }
-                    ],
-                    "postProcessors": [],
-                    "inheritPostProcessors": {},
-                    "inheritPreProcessors": {}
-                  },
-                  {
-                    "id": 29279678,
-                    "type": "TEST_CASE",
-                    "path": "/questions/question-5",
-                    "name": "Days Late >5",
-                    "responseId": 29957724,
-                    "parameters": {
-                      "query": [
-                        {
-                          "id": "anFO1JPL5X",
-                          "relatedName": "daysLate",
-                          "name": "daysLate",
-                          "value": "7",
-                          "type": "integer",
-                          "description": "Number of days the book is late",
-                          "enable": true,
-                          "isDelete": false
-                        }
-                      ],
-                      "header": [],
-                      "cookie": [],
-                      "path": []
-                    },
-                    "commonParameters": {
-                      "query": [],
-                      "body": [],
-                      "header": [],
-                      "cookie": []
-                    },
-                    "requestBody": {
-                      "parameters": [],
-                      "type": "none",
-                      "data": "",
-                      "generateMode": "normal"
-                    },
-                    "auth": {},
-                    "securityScheme": {
-                      "scopes": {}
-                    },
-                    "advancedSettings": {
-                      "disabledSystemHeaders": {},
-                      "isDefaultUrlEncoding": 1
-                    },
-                    "requestResult": null,
-                    "visibility": "INHERITED",
-                    "moduleId": 865902,
-                    "categoryId": 109986,
-                    "preProcessors": [
-                      {
-                        "type": "placeholder",
-                        "renderType": "dynamicValueDivider",
-                        "defaultEnable": false,
-                        "enable": false
-                      }
-                    ],
-                    "postProcessors": [],
-                    "inheritPostProcessors": {},
-                    "inheritPreProcessors": {}
-                  }
-                ],
-                "mocks": [],
-                "customApiFields": "{}",
-                "advancedSettings": {
-                  "disabledSystemHeaders": {}
-                },
-                "mockScript": {},
-                "codeSamples": [],
-                "commonResponseStatus": {},
-                "responseChildren": [
-                  "BLANK.29957724",
-                  "BLANK.29957725"
-                ],
-                "visibility": "INHERITED",
-                "moduleId": 865902,
-                "oasExtensions": "",
-                "type": "http",
-                "preProcessors": [],
-                "postProcessors": [],
-                "inheritPostProcessors": {},
-                "inheritPreProcessors": {}
-              }
-            }
-          ]
-        }
-      ]
-    }
-  ],
-  "socketCollection": [],
-  "docCollection": [],
-  "webSocketCollection": [],
-  "socketIOCollection": [],
-  "responseCollection": [
-    {
-      "_databaseId": 1095064,
-      "updatedAt": "2025-08-25T12:33:52.000Z",
-      "name": "Root",
-      "type": "root",
-      "children": [],
-      "moduleId": 865902,
-      "parentId": 0,
-      "id": 1095064,
-      "ordering": [],
-      "items": []
-    }
-  ],
-  "schemaCollection": [
-    {
-      "id": 2471909,
-      "name": "Root",
-      "visibility": "SHARED",
-      "moduleId": 865902,
-      "items": [
-        {
-          "id": 2471910,
-          "name": "Schemas",
-          "visibility": "INHERITED",
-          "moduleId": 865902,
-          "items": [
-            {
-              "name": "Question1Response",
-              "displayName": "",
-              "id": "#/definitions/8923481",
-              "description": "",
-              "schema": {
-                "jsonSchema": {
-                  "type": "object",
-                  "properties": {
-                    "originalPrice": {
-                      "type": "integer",
-                      "description": "Original price before discount"
-                    },
-                    "discount": {
-                      "type": "integer",
-                      "description": "Discount amount applied"
-                    },
-                    "finalPrice": {
-                      "type": "integer",
-                      "description": "Final price after discount"
-                    }
-                  },
-                  "required": [
-                    "originalPrice",
-                    "discount",
-                    "finalPrice"
-                  ],
-                  "x-apidog-orders": [
-                    "originalPrice",
-                    "discount",
-                    "finalPrice"
-                  ]
+          "400": {
+            "description": "Bad request - invalid discount value",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
                 }
-              },
-              "visibility": "INHERITED",
-              "moduleId": 865902
-            },
-            {
-              "name": "Question2Response",
-              "displayName": "",
-              "id": "#/definitions/8923482",
-              "description": "",
-              "schema": {
-                "jsonSchema": {
-                  "type": "object",
-                  "properties": {
-                    "userInitial": {
-                      "type": "string",
-                      "description": "User's initial letter"
-                    }
-                  },
-                  "required": [
-                    "userInitial"
-                  ],
-                  "x-apidog-orders": [
-                    "userInitial"
-                  ]
-                }
-              },
-              "visibility": "INHERITED",
-              "moduleId": 865902
-            },
-            {
-              "name": "Question3Request",
-              "displayName": "",
-              "id": "#/definitions/8923483",
-              "description": "",
-              "schema": {
-                "jsonSchema": {
-                  "type": "object",
-                  "properties": {
-                    "price": {
-                      "type": "integer",
-                      "description": "Original price"
-                    },
-                    "discountPercent": {
-                      "type": "integer",
-                      "description": "Discount percentage",
-                      "minimum": 0,
-                      "maximum": 100
-                    }
-                  },
-                  "required": [
-                    "price",
-                    "discountPercent"
-                  ],
-                  "x-apidog-orders": [
-                    "price",
-                    "discountPercent"
-                  ]
-                }
-              },
-              "visibility": "INHERITED",
-              "moduleId": 865902
-            },
-            {
-              "name": "Question3Response",
-              "displayName": "",
-              "id": "#/definitions/8923484",
-              "description": "",
-              "schema": {
-                "jsonSchema": {
-                  "type": "object",
-                  "properties": {
-                    "originalPrice": {
-                      "type": "integer",
-                      "description": "Original price before discount"
-                    },
-                    "discount": {
-                      "type": "integer",
-                      "description": "Discount amount calculated"
-                    },
-                    "finalPrice": {
-                      "type": "integer",
-                      "description": "Final price after discount"
-                    }
-                  },
-                  "required": [
-                    "originalPrice",
-                    "discount",
-                    "finalPrice"
-                  ],
-                  "x-apidog-orders": [
-                    "originalPrice",
-                    "discount",
-                    "finalPrice"
-                  ]
-                }
-              },
-              "visibility": "INHERITED",
-              "moduleId": 865902
-            },
-            {
-              "name": "Question4Request",
-              "displayName": "",
-              "id": "#/definitions/8923485",
-              "description": "",
-              "schema": {
-                "jsonSchema": {
-                  "type": "object",
-                  "properties": {
-                    "price": {
-                      "type": "number",
-                      "format": "double",
-                      "description": "Price per item"
-                    },
-                    "quantity": {
-                      "type": "integer",
-                      "description": "Number of items",
-                      "minimum": 1
-                    },
-                    "isMember": {
-                      "type": "boolean",
-                      "description": "Whether the customer is a member"
-                    }
-                  },
-                  "required": [
-                    "price",
-                    "quantity",
-                    "isMember"
-                  ],
-                  "x-apidog-orders": [
-                    "price",
-                    "quantity",
-                    "isMember"
-                  ]
-                }
-              },
-              "visibility": "INHERITED",
-              "moduleId": 865902
-            },
-            {
-              "name": "Question4Response",
-              "displayName": "",
-              "id": "#/definitions/8923486",
-              "description": "",
-              "schema": {
-                "jsonSchema": {
-                  "type": "object",
-                  "properties": {
-                    "originalPrice": {
-                      "type": "number",
-                      "format": "double",
-                      "description": "Original total price before discounts"
-                    },
-                    "isMember": {
-                      "type": "boolean",
-                      "description": "Whether the customer is a member"
-                    },
-                    "quantity": {
-                      "type": "integer",
-                      "description": "Number of items ordered"
-                    },
-                    "finalPrice": {
-                      "type": "number",
-                      "format": "double",
-                      "description": "Final price after all discounts"
-                    }
-                  },
-                  "required": [
-                    "originalPrice",
-                    "isMember",
-                    "quantity",
-                    "finalPrice"
-                  ],
-                  "x-apidog-orders": [
-                    "originalPrice",
-                    "isMember",
-                    "quantity",
-                    "finalPrice"
-                  ]
-                }
-              },
-              "visibility": "INHERITED",
-              "moduleId": 865902
-            },
-            {
-              "name": "Question5Response",
-              "displayName": "",
-              "id": "#/definitions/8923487",
-              "description": "",
-              "schema": {
-                "jsonSchema": {
-                  "type": "object",
-                  "properties": {
-                    "daysLate": {
-                      "type": "integer",
-                      "description": "Number of days late"
-                    },
-                    "lateFee": {
-                      "type": "number",
-                      "format": "double",
-                      "description": "Calculated late fee"
-                    }
-                  },
-                  "required": [
-                    "daysLate",
-                    "lateFee"
-                  ],
-                  "x-apidog-orders": [
-                    "daysLate",
-                    "lateFee"
-                  ]
-                }
-              },
-              "visibility": "INHERITED",
-              "moduleId": 865902
-            },
-            {
-              "name": "ErrorResponse",
-              "displayName": "",
-              "id": "#/definitions/8923488",
-              "description": "",
-              "schema": {
-                "jsonSchema": {
-                  "type": "object",
-                  "properties": {
-                    "type": {
-                      "type": "string",
-                      "description": "Error type"
-                    },
-                    "title": {
-                      "type": "string",
-                      "description": "Error title"
-                    },
-                    "status": {
-                      "type": "integer",
-                      "description": "HTTP status code"
-                    },
-                    "detail": {
-                      "type": "string",
-                      "description": "Error details"
-                    },
-                    "traceId": {
-                      "type": "string",
-                      "description": "Trace ID for debugging"
-                    }
-                  },
-                  "x-apidog-orders": [
-                    "type",
-                    "title",
-                    "status",
-                    "detail",
-                    "traceId"
-                  ]
-                }
-              },
-              "visibility": "INHERITED",
-              "moduleId": 865902
-            }
-          ]
-        }
-      ]
-    }
-  ],
-  "securitySchemeCollection": [
-    {
-      "id": 712825,
-      "moduleId": 865902,
-      "name": "Root",
-      "items": [],
-      "ordering": []
-    }
-  ],
-  "requestCollection": [
-    {
-      "name": "Root",
-      "children": [],
-      "ordering": [
-        "requestFolder.7834612"
-      ],
-      "items": []
-    }
-  ],
-  "apiTestCaseCollection": [
-    {
-      "name": "Root",
-      "children": [],
-      "items": [
-        {
-          "steps": [
-            {
-              "name": "Question 1 - Discount calculation with error handling",
-              "number": 1,
-              "type": "http",
-              "bind": false,
-              "disable": false,
-              "bindType": "API",
-              "bindId": 20641131,
-              "syncMode": "MANUAL",
-              "httpApiCase": {
-                "id": 29265433,
-                "name": "Question 1 - Discount calculation with error handling",
-                "method": "get",
-                "path": "/questions/question-1",
-                "auth": {},
-                "type": "http",
-                "options": {},
-                "parameters": {
-                  "query": [
-                    {
-                      "id": "rSEFGeUU3X",
-                      "relatedName": "discount",
-                      "name": "discount",
-                      "value": "not a number",
-                      "type": "string",
-                      "description": "Discount amount as string (should be convertible to integer)",
-                      "enable": true,
-                      "isDelete": false
-                    }
-                  ],
-                  "header": [],
-                  "cookie": [],
-                  "path": []
-                },
-                "responseId": 0,
-                "requestBody": {
-                  "parameters": [],
-                  "type": "none",
-                  "data": "",
-                  "generateMode": "normal"
-                },
-                "preProcessors": [
-                  {
-                    "type": "placeholder",
-                    "renderType": "dynamicValueDivider",
-                    "defaultEnable": false,
-                    "enable": false
-                  }
-                ],
-                "postProcessors": [
-                  {
-                    "type": "customScript",
-                    "data": "pm.test(\"Status code is 400\", function () {\n  pm.response.to.have.status(400);\n});\n",
-                    "defaultEnable": false,
-                    "enable": true
-                  }
-                ],
-                "advancedSettings": {
-                  "disabledSystemHeaders": {},
-                  "isDefaultUrlEncoding": 3,
-                  "disableUrlEncoding": false
-                },
-                "commonParameters": {
-                  "query": [],
-                  "body": [],
-                  "header": [],
-                  "cookie": []
-                },
-                "inheritPreProcessors": {},
-                "inheritPostProcessors": {},
-                "inheritPreProcessorsSnapshot": [],
-                "inheritPostProcessorsSnapshot": [],
-                "moduleId": 865902,
-                "apiId": 20641131
               }
             },
-            {
-              "name": "Question 2 - Null reference handling",
-              "number": 2,
-              "type": "http",
-              "bind": false,
-              "disable": false,
-              "bindType": "API",
-              "bindId": 20641132,
-              "syncMode": "MANUAL",
-              "httpApiCase": {
-                "id": 29265432,
-                "name": "Question 2 - Null reference handling",
-                "method": "get",
-                "path": "/questions/question-2",
-                "auth": {},
-                "type": "http",
-                "options": {},
-                "parameters": {
-                  "query": [],
-                  "header": [],
-                  "cookie": [],
-                  "path": []
-                },
-                "responseId": 0,
-                "requestBody": {
-                  "parameters": [],
-                  "type": "none",
-                  "data": "",
-                  "generateMode": "normal"
-                },
-                "preProcessors": [
-                  {
-                    "type": "placeholder",
-                    "renderType": "dynamicValueDivider",
-                    "defaultEnable": false,
-                    "enable": false
-                  }
-                ],
-                "postProcessors": [
-                  {
-                    "type": "customScript",
-                    "data": "pm.test(\"Status code should be 400\", function () {\n  pm.response.to.have.status(400);\n});\n",
-                    "defaultEnable": false,
-                    "enable": true
-                  }
-                ],
-                "advancedSettings": {
-                  "disabledSystemHeaders": {},
-                  "isDefaultUrlEncoding": 1
-                },
-                "commonParameters": {
-                  "query": [],
-                  "body": [],
-                  "header": [],
-                  "cookie": []
-                },
-                "inheritPreProcessors": {},
-                "inheritPostProcessors": {},
-                "inheritPreProcessorsSnapshot": [],
-                "inheritPostProcessorsSnapshot": [],
-                "moduleId": 865902,
-                "apiId": 20641132
-              }
-            },
-            {
-              "name": "Question 3 - Discount formula correction",
-              "number": 3,
-              "type": "http",
-              "bind": false,
-              "disable": false,
-              "bindType": "API",
-              "bindId": 20641133,
-              "syncMode": "MANUAL",
-              "httpApiCase": {
-                "id": 29265431,
-                "name": "Question 3 - Discount formula correction",
-                "method": "post",
-                "path": "/questions/question-3",
-                "auth": {},
-                "type": "http",
-                "options": {},
-                "parameters": {
-                  "query": [],
-                  "header": [],
-                  "cookie": [],
-                  "path": []
-                },
-                "responseId": 0,
-                "requestBody": {
-                  "parameters": [],
-                  "type": "application/json",
-                  "data": "{\n    \"price\": 100,\n    \"discountPercent\": 25\n}",
-                  "jsonSchema": {
-                    "$ref": "#/definitions/8625581"
-                  },
-                  "generateMode": "normal"
-                },
-                "preProcessors": [
-                  {
-                    "type": "placeholder",
-                    "renderType": "dynamicValueDivider",
-                    "defaultEnable": false,
-                    "enable": false
-                  }
-                ],
-                "postProcessors": [
-                  {
-                    "type": "customScript",
-                    "data": "pm.test(\"Status code should be 200\", function () {\n    pm.response.to.have.status(200);\n});\n\npm.test(\"Final price should be formulated correctly\", function () {\n    const jsonData = pm.response.json();\n    const {\n        originalPrice,\n        discountPercent,\n        finalPrice,\n    } = jsonData;\n\n    const correctFinalPrice = originalPrice - (originalPrice * (discountPercent / 100))\n    pm.expect(finalPrice).to.eql(correctFinalPrice);\n});\n\n",
-                    "defaultEnable": false,
-                    "enable": true
-                  }
-                ],
-                "advancedSettings": {
-                  "disabledSystemHeaders": {},
-                  "isDefaultUrlEncoding": 1
-                },
-                "commonParameters": {
-                  "query": [],
-                  "body": [],
-                  "header": [],
-                  "cookie": []
-                },
-                "inheritPreProcessors": {},
-                "inheritPostProcessors": {},
-                "inheritPreProcessorsSnapshot": [],
-                "inheritPostProcessorsSnapshot": [],
-                "moduleId": 865902,
-                "apiId": 20641133
-              }
-            },
-            {
-              "name": "Question 4 - Order discount calculation - member",
-              "number": 5,
-              "type": "http",
-              "bind": false,
-              "disable": false,
-              "bindType": "API",
-              "bindId": 20641134,
-              "syncMode": "MANUAL",
-              "httpApiCase": {
-                "id": 29265430,
-                "name": "Question 4 - Order discount calculation",
-                "method": "post",
-                "path": "/questions/question-4",
-                "auth": {},
-                "type": "http",
-                "options": {},
-                "parameters": {
-                  "query": [],
-                  "header": [],
-                  "cookie": [],
-                  "path": []
-                },
-                "responseId": 0,
-                "requestBody": {
-                  "parameters": [],
-                  "type": "application/json",
-                  "data": "{\n    \"price\": 10000,\n    \"quantity\": 1,\n    \"isMember\": true\n}",
-                  "jsonSchema": {
-                    "$ref": "#/definitions/8625583"
-                  },
-                  "generateMode": "normal"
-                },
-                "preProcessors": [
-                  {
-                    "type": "placeholder",
-                    "renderType": "dynamicValueDivider",
-                    "defaultEnable": false,
-                    "enable": false
-                  }
-                ],
-                "postProcessors": [
-                  {
-                    "type": "customScript",
-                    "data": "pm.test(\"Status code should be 200\", function () {\n    pm.response.to.have.status(200);\n});\n\npm.test(\"Final price should be discounted 10% if is member\", function () {\n    const jsonData = pm.response.json();\n    pm.expect(jsonData.isMember).to.eql(true);\n\n    const { originalPrice } = jsonData;\n    const correctFinalPrice = originalPrice - (originalPrice * 10 / 100);\n    pm.expect(jsonData.finalPrice).to.eql(correctFinalPrice);\n});\n\n",
-                    "defaultEnable": false,
-                    "enable": true
-                  }
-                ],
-                "advancedSettings": {
-                  "disabledSystemHeaders": {},
-                  "isDefaultUrlEncoding": 1
-                },
-                "commonParameters": {
-                  "query": [],
-                  "body": [],
-                  "header": [],
-                  "cookie": []
-                },
-                "inheritPreProcessors": {},
-                "inheritPostProcessors": {},
-                "inheritPreProcessorsSnapshot": [],
-                "inheritPostProcessorsSnapshot": [],
-                "moduleId": 865902,
-                "apiId": 20641134
-              }
-            },
-            {
-              "name": "Question 4 - Order discount calculation - quantity member and more than 5",
-              "number": 6,
-              "type": "http",
-              "bind": false,
-              "disable": false,
-              "bindType": "API",
-              "bindId": 20641134,
-              "syncMode": "MANUAL",
-              "httpApiCase": {
-                "id": 29265429,
-                "name": "Question 4 - Order discount calculation",
-                "method": "post",
-                "path": "/questions/question-4",
-                "auth": {},
-                "type": "http",
-                "options": {},
-                "parameters": {
-                  "query": [],
-                  "header": [],
-                  "cookie": [],
-                  "path": []
-                },
-                "responseId": 0,
-                "requestBody": {
-                  "parameters": [],
-                  "type": "application/json",
-                  "data": "{\n    \"price\": 1000,\n    \"quantity\": 10,\n    \"isMember\": false\n}",
-                  "jsonSchema": {
-                    "$ref": "#/definitions/8625583"
-                  },
-                  "generateMode": "normal"
-                },
-                "preProcessors": [
-                  {
-                    "type": "placeholder",
-                    "renderType": "dynamicValueDivider",
-                    "defaultEnable": false,
-                    "enable": false
-                  }
-                ],
-                "postProcessors": [
-                  {
-                    "type": "customScript",
-                    "data": "pm.test(\"Status code should be 200\", function () {\n    pm.response.to.have.status(200);\n});\n\npm.test(\"Final price should be discounted 5% if quantity > 5\", function () {\n    const jsonData = pm.response.json();\n    pm.expect(jsonData.isMember).to.eql(false);\n\n    const { originalPrice } = jsonData;\n    const correctFinalPrice = originalPrice - (originalPrice * 5 / 100);\n    pm.expect(jsonData.finalPrice).to.eql(correctFinalPrice);\n});\n\n",
-                    "defaultEnable": false,
-                    "enable": true
-                  }
-                ],
-                "advancedSettings": {
-                  "disabledSystemHeaders": {},
-                  "isDefaultUrlEncoding": 1
-                },
-                "commonParameters": {
-                  "query": [],
-                  "body": [],
-                  "header": [],
-                  "cookie": []
-                },
-                "inheritPreProcessors": {},
-                "inheritPostProcessors": {},
-                "inheritPreProcessorsSnapshot": [],
-                "inheritPostProcessorsSnapshot": [],
-                "moduleId": 865902,
-                "apiId": 20641134
-              }
-            },
-            {
-              "name": "Question 4 - Order discount calculation - quantity more than 5",
-              "number": 8,
-              "type": "http",
-              "bind": false,
-              "disable": false,
-              "bindType": "API",
-              "bindId": 20641134,
-              "syncMode": "MANUAL",
-              "httpApiCase": {
-                "id": 29265428,
-                "name": "Question 4 - Order discount calculation",
-                "method": "post",
-                "path": "/questions/question-4",
-                "auth": {},
-                "type": "http",
-                "options": {},
-                "parameters": {
-                  "query": [],
-                  "header": [],
-                  "cookie": [],
-                  "path": []
-                },
-                "responseId": 0,
-                "requestBody": {
-                  "parameters": [],
-                  "type": "application/json",
-                  "data": "{\n    \"price\": 1000,\n    \"quantity\": 10,\n    \"isMember\": true\n}",
-                  "jsonSchema": {
-                    "$ref": "#/definitions/8625583"
-                  },
-                  "generateMode": "normal"
-                },
-                "preProcessors": [
-                  {
-                    "type": "placeholder",
-                    "renderType": "dynamicValueDivider",
-                    "defaultEnable": false,
-                    "enable": false
-                  }
-                ],
-                "postProcessors": [
-                  {
-                    "type": "customScript",
-                    "data": "pm.test(\"Status code should be 200\", function () {\n    pm.response.to.have.status(200);\n});\n\npm.test(\"Final price should be discounted 10% if is member\", function () {\n    const jsonData = pm.response.json();\n    pm.expect(jsonData.isMember).to.eql(false);\n\n    const { originalPrice } = jsonData;\n    const correctFinalPrice = originalPrice - (originalPrice * 5 / 100);\n    pm.expect(jsonData.finalPrice).to.eql(correctFinalPrice);\n});\n\n",
-                    "defaultEnable": false,
-                    "enable": true
-                  }
-                ],
-                "advancedSettings": {
-                  "disabledSystemHeaders": {},
-                  "isDefaultUrlEncoding": 1
-                },
-                "commonParameters": {
-                  "query": [],
-                  "body": [],
-                  "header": [],
-                  "cookie": []
-                },
-                "inheritPreProcessors": {},
-                "inheritPostProcessors": {},
-                "inheritPreProcessorsSnapshot": [],
-                "inheritPostProcessorsSnapshot": [],
-                "moduleId": 865902,
-                "apiId": 20641134
-              }
-            },
-            {
-              "name": "Question 5 - Library late fee calculation less than 5 days",
-              "number": 4,
-              "type": "http",
-              "bind": false,
-              "disable": false,
-              "bindType": "API",
-              "bindId": 20641135,
-              "syncMode": "MANUAL",
-              "httpApiCase": {
-                "id": 29265427,
-                "name": "Question 5 - Library late fee calculation",
-                "method": "get",
-                "path": "/questions/question-5",
-                "auth": {},
-                "type": "http",
-                "options": {},
-                "parameters": {
-                  "query": [
-                    {
-                      "id": "anFO1JPL5X",
-                      "relatedName": "daysLate",
-                      "name": "daysLate",
-                      "value": "4",
-                      "type": "integer",
-                      "description": "Number of days the book is late",
-                      "enable": true,
-                      "isDelete": false
-                    }
-                  ],
-                  "header": [],
-                  "cookie": [],
-                  "path": []
-                },
-                "responseId": 0,
-                "requestBody": {
-                  "parameters": [],
-                  "type": "none",
-                  "data": "",
-                  "generateMode": "normal"
-                },
-                "preProcessors": [
-                  {
-                    "type": "placeholder",
-                    "renderType": "dynamicValueDivider",
-                    "defaultEnable": false,
-                    "enable": false
-                  }
-                ],
-                "postProcessors": [
-                  {
-                    "type": "customScript",
-                    "data": "pm.test(\"Status code is 200\", function () {\n    pm.response.to.have.status(200);\n});\n\npm.test(\"Late fee should be calculated correctly\", function () {\n    const jsonData = pm.response.json();\n    const { daysLate } = jsonData;\n\n    let correctLateFee = 0;\n    if (daysLate <= 5) {\n        correctLateFee += daysLate * 1000;\n    } else {\n        correctLateFee += 5 * 1000;\n    }\n\n    if (daysLate > 5) {\n        correctLateFee += (daysLate - 5) * 2000;\n    }\n\n    pm.expect(jsonData.lateFee).to.eql(correctLateFee);\n});\n\n",
-                    "defaultEnable": false,
-                    "enable": true
-                  }
-                ],
-                "advancedSettings": {
-                  "disabledSystemHeaders": {},
-                  "isDefaultUrlEncoding": 1
-                },
-                "commonParameters": {
-                  "query": [],
-                  "body": [],
-                  "header": [],
-                  "cookie": []
-                },
-                "inheritPreProcessors": {},
-                "inheritPostProcessors": {},
-                "inheritPreProcessorsSnapshot": [],
-                "inheritPostProcessorsSnapshot": [],
-                "moduleId": 865902,
-                "apiId": 20641135
-              }
-            },
-            {
-              "name": "Question 5 - Library late fee calculation more than 5 days",
-              "number": 7,
-              "type": "http",
-              "bind": false,
-              "disable": false,
-              "bindType": "API",
-              "bindId": 20641135,
-              "syncMode": "MANUAL",
-              "httpApiCase": {
-                "id": 29265426,
-                "name": "Question 5 - Library late fee calculation",
-                "method": "get",
-                "path": "/questions/question-5",
-                "auth": {},
-                "type": "http",
-                "options": {},
-                "parameters": {
-                  "query": [
-                    {
-                      "id": "anFO1JPL5X",
-                      "relatedName": "daysLate",
-                      "name": "daysLate",
-                      "value": "10",
-                      "type": "integer",
-                      "description": "Number of days the book is late",
-                      "enable": true,
-                      "isDelete": false
-                    }
-                  ],
-                  "header": [],
-                  "cookie": [],
-                  "path": []
-                },
-                "responseId": 0,
-                "requestBody": {
-                  "parameters": [],
-                  "type": "none",
-                  "data": "",
-                  "generateMode": "normal"
-                },
-                "preProcessors": [
-                  {
-                    "type": "placeholder",
-                    "renderType": "dynamicValueDivider",
-                    "defaultEnable": false,
-                    "enable": false
-                  }
-                ],
-                "postProcessors": [
-                  {
-                    "type": "customScript",
-                    "data": "pm.test(\"Status code is 200\", function () {\n    pm.response.to.have.status(200);\n});\n\npm.test(\"Late fee should be calculated correctly\", function () {\n    const jsonData = pm.response.json();\n    const { daysLate } = jsonData;\n\n    let correctLateFee = 0;\n    if (daysLate <= 5) {\n        correctLateFee += daysLate * 1000;\n    } else {\n        correctLateFee += 5 * 1000;\n    }\n\n    if (daysLate > 5) {\n        correctLateFee += (daysLate - 5) * 2000;\n    }\n\n    pm.expect(jsonData.lateFee).to.eql(correctLateFee);\n});\n\n",
-                    "defaultEnable": false,
-                    "enable": true
-                  }
-                ],
-                "advancedSettings": {
-                  "disabledSystemHeaders": {},
-                  "isDefaultUrlEncoding": 1
-                },
-                "commonParameters": {
-                  "query": [],
-                  "body": [],
-                  "header": [],
-                  "cookie": []
-                },
-                "inheritPreProcessors": {},
-                "inheritPostProcessors": {},
-                "inheritPreProcessorsSnapshot": [],
-                "inheritPostProcessorsSnapshot": [],
-                "moduleId": 865902,
-                "apiId": 20641135
-              }
-            }
-          ],
-          "id": 1380695,
-          "name": "questions",
-          "tags": [],
-          "options": {},
-          "priority": 2,
-          "ordering": 10,
-          "description": "",
-          "preProcessors": [],
-          "postProcessors": [],
-          "children": [],
-          "performanceTestOptions": {},
-          "apiTestDataSets": []
-        }
-      ]
-    }
-  ],
-  "testCaseReferences": [],
-  "environments": [
-    {
-      "name": "Test",
-      "requestProxyAgentSettings": {},
-      "variables": [],
-      "parameters": {
-        "cookie": [],
-        "query": [],
-        "header": [],
-        "body": []
-      },
-      "type": "normal",
-      "visibility": "protected",
-      "ordering": 30,
-      "tags": [
-        {
-          "name": "",
-          "color": "#1890FF"
-        }
-      ],
-      "id": "4693763",
-      "baseUrl": "http://localhost:5088",
-      "baseUrls": {
-        "default": "http://localhost:5088"
-      }
-    }
-  ],
-  "commonScripts": [],
-  "databaseConnections": [],
-  "globalVariables": [],
-  "commonParameters": null,
-  "projectSetting": {
-    "id": "1049055",
-    "auth": {},
-    "securityScheme": {},
-    "gateway": [],
-    "language": "en-US",
-    "apiStatuses": [
-      "developing",
-      "testing",
-      "released",
-      "deprecated"
-    ],
-    "mockSettings": {},
-    "preProcessors": [],
-    "postProcessors": [],
-    "advancedSettings": {
-      "enableJsonc": false,
-      "enableBigint": false,
-      "responseValidate": true,
-      "enableTestScenarioSetting": false,
-      "enableYAPICompatScript": false,
-      "isDefaultUrlEncoding": 3,
-      "publishedDocUrlRules": {
-        "defaultRule": "SLUGIFY_WITH_RESOURCE_KEY",
-        "resourceKeyStandard": "NEW"
+            "headers": {}
+          }
+        },
+        "security": []
       }
     },
-    "initialDisabledMockIds": [],
-    "servers": [
-      {
-        "id": "default",
-        "name": "Default Server"
+    "/questions/question-2": {
+      "get": {
+        "summary": "Question 2 - Null reference handling",
+        "deprecated": false,
+        "description": "Gets user initial from external source. Requires proper null handling.",
+        "tags": [
+          "Questions"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Question2Response"
+                }
+              }
+            },
+            "headers": {}
+          },
+          "400": {
+            "description": "Bad request - null user data",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
       }
-    ],
-    "cloudMock": {
-      "security": "free",
-      "enable": false,
-      "tokenKey": "apidogToken"
+    },
+    "/questions/question-3": {
+      "post": {
+        "summary": "Question 3 - Discount formula correction",
+        "deprecated": false,
+        "description": "Calculates discount based on percentage. Formula needs to be corrected.",
+        "tags": [
+          "Questions"
+        ],
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Question3Request"
+              },
+              "example": {
+                "price": 100,
+                "discountPercent": 100
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Question3Response"
+                }
+              }
+            },
+            "headers": {}
+          },
+          "400": {
+            "description": "Bad request - invalid input",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/questions/question-4": {
+      "post": {
+        "summary": "Question 4 - Order discount calculation",
+        "deprecated": false,
+        "description": "Calculates final price for orders with member and bulk discounts.",
+        "tags": [
+          "Questions"
+        ],
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Question4Request"
+              },
+              "example": {
+                "price": 10,
+                "quantity": 10,
+                "isMember": true
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Question4Response"
+                }
+              }
+            },
+            "headers": {}
+          },
+          "400": {
+            "description": "Bad request - invalid input",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/questions/question-5": {
+      "get": {
+        "summary": "Question 5 - Library late fee calculation",
+        "deprecated": false,
+        "description": "Calculates late fee based on number of days late.",
+        "tags": [
+          "Questions"
+        ],
+        "parameters": [
+          {
+            "name": "daysLate",
+            "in": "query",
+            "description": "Number of days the book is late",
+            "required": true,
+            "example": 5,
+            "schema": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Question5Response"
+                }
+              }
+            },
+            "headers": {}
+          },
+          "400": {
+            "description": "Bad request - invalid days late value",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
     }
   },
-  "customFunctions": [],
-  "projectTestCaseCategories": [
-    {
-      "id": 109986,
-      "name": "Positive"
+  "components": {
+    "schemas": {
+      "Question1Response": {
+        "type": "object",
+        "properties": {
+          "originalPrice": {
+            "type": "integer",
+            "description": "Original price before discount"
+          },
+          "discount": {
+            "type": "integer",
+            "description": "Discount amount applied"
+          },
+          "finalPrice": {
+            "type": "integer",
+            "description": "Final price after discount"
+          }
+        },
+        "required": [
+          "originalPrice",
+          "discount",
+          "finalPrice"
+        ]
+      },
+      "Question2Response": {
+        "type": "object",
+        "properties": {
+          "userInitial": {
+            "type": "string",
+            "description": "User's initial letter"
+          }
+        },
+        "required": [
+          "userInitial"
+        ]
+      },
+      "Question3Request": {
+        "type": "object",
+        "properties": {
+          "price": {
+            "type": "integer",
+            "description": "Original price"
+          },
+          "discountPercent": {
+            "type": "integer",
+            "description": "Discount percentage",
+            "minimum": 0,
+            "maximum": 100
+          }
+        },
+        "required": [
+          "price",
+          "discountPercent"
+        ]
+      },
+      "Question3Response": {
+        "type": "object",
+        "properties": {
+          "originalPrice": {
+            "type": "integer",
+            "description": "Original price before discount"
+          },
+          "discount": {
+            "type": "integer",
+            "description": "Discount amount calculated"
+          },
+          "finalPrice": {
+            "type": "integer",
+            "description": "Final price after discount"
+          }
+        },
+        "required": [
+          "originalPrice",
+          "discount",
+          "finalPrice"
+        ]
+      },
+      "Question4Request": {
+        "type": "object",
+        "properties": {
+          "price": {
+            "type": "number",
+            "format": "double",
+            "description": "Price per item"
+          },
+          "quantity": {
+            "type": "integer",
+            "description": "Number of items",
+            "minimum": 1
+          },
+          "isMember": {
+            "type": "boolean",
+            "description": "Whether the customer is a member"
+          }
+        },
+        "required": [
+          "price",
+          "quantity",
+          "isMember"
+        ]
+      },
+      "Question4Response": {
+        "type": "object",
+        "properties": {
+          "originalPrice": {
+            "type": "number",
+            "format": "double",
+            "description": "Original total price before discounts"
+          },
+          "isMember": {
+            "type": "boolean",
+            "description": "Whether the customer is a member"
+          },
+          "quantity": {
+            "type": "integer",
+            "description": "Number of items ordered"
+          },
+          "finalPrice": {
+            "type": "number",
+            "format": "double",
+            "description": "Final price after all discounts"
+          }
+        },
+        "required": [
+          "originalPrice",
+          "isMember",
+          "quantity",
+          "finalPrice"
+        ]
+      },
+      "Question5Response": {
+        "type": "object",
+        "properties": {
+          "daysLate": {
+            "type": "integer",
+            "description": "Number of days late"
+          },
+          "lateFee": {
+            "type": "number",
+            "format": "double",
+            "description": "Calculated late fee"
+          }
+        },
+        "required": [
+          "daysLate",
+          "lateFee"
+        ]
+      },
+      "ErrorResponse": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "Error type"
+          },
+          "title": {
+            "type": "string",
+            "description": "Error title"
+          },
+          "status": {
+            "type": "integer",
+            "description": "HTTP status code"
+          },
+          "detail": {
+            "type": "string",
+            "description": "Error details"
+          },
+          "traceId": {
+            "type": "string",
+            "description": "Trace ID for debugging"
+          }
+        }
+      }
     },
-    {
-      "id": 109987,
-      "name": "Negative"
-    },
-    {
-      "id": 109988,
-      "name": "Boundary Value"
-    },
-    {
-      "id": 109989,
-      "name": "Security"
-    },
-    {
-      "id": 109990,
-      "name": "Other"
-    }
-  ],
-  "projectAssociations": []
+    "securitySchemes": {}
+  },
+  "servers": [],
+  "security": []
 }
