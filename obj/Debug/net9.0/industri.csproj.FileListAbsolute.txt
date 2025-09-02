@@ -30,3 +30,5 @@ D:\1 - LEARN\industri\obj\Debug\net9.0\refint\industri.dll
 D:\1 - LEARN\industri\obj\Debug\net9.0\industri.pdb
 D:\1 - LEARN\industri\obj\Debug\net9.0\industri.genruntimeconfig.cache
 D:\1 - LEARN\industri\obj\Debug\net9.0\ref\industri.dll
+D:\1 - LEARN\industri\bin\Debug\net9.0\docs\thunder-collection_postman_Industri.json
+D:\1 - LEARN\industri\obj\Debug\net9.0\industri.sourcelink.json

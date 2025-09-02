@@ -1,0 +1,1510 @@
+{
+  "apidogProject": "1.0.0",
+  "$schema": {
+    "app": "apidog",
+    "type": "project",
+    "version": "1.2.0"
+  },
+  "info": {
+    "name": "dotnet industri",
+    "description": "",
+    "mockRule": {
+      "rules": [],
+      "enableSystemRule": true
+    }
+  },
+  "apiCollection": [
+    {
+      "name": "Root",
+      "id": 4659833,
+      "auth": {},
+      "securityScheme": {},
+      "parentId": 0,
+      "serverId": "",
+      "description": "",
+      "identityPattern": {
+        "httpApi": {
+          "type": "methodAndPath",
+          "bodyType": "",
+          "fields": []
+        }
+      },
+      "shareSettings": {},
+      "visibility": "SHARED",
+      "moduleId": 861104,
+      "preProcessors": [
+        {
+          "id": "inheritProcessors",
+          "type": "inheritProcessors",
+          "data": {}
+        }
+      ],
+      "postProcessors": [
+        {
+          "id": "inheritProcessors",
+          "type": "inheritProcessors",
+          "data": {}
+        }
+      ],
+      "inheritPostProcessors": {},
+      "inheritPreProcessors": {},
+      "items": [
+        {
+          "name": "Books",
+          "id": 4788529,
+          "auth": {},
+          "securityScheme": {},
+          "parentId": 0,
+          "serverId": "",
+          "description": "",
+          "identityPattern": {
+            "httpApi": {
+              "type": "inherit",
+              "bodyType": "",
+              "fields": []
+            }
+          },
+          "shareSettings": {},
+          "visibility": "INHERITED",
+          "moduleId": 861104,
+          "preProcessors": [
+            {
+              "id": "inheritProcessors",
+              "type": "inheritProcessors",
+              "data": {}
+            }
+          ],
+          "postProcessors": [
+            {
+              "id": "inheritProcessors",
+              "type": "inheritProcessors",
+              "data": {}
+            }
+          ],
+          "inheritPostProcessors": {},
+          "inheritPreProcessors": {},
+          "items": [
+            {
+              "name": "Get Books",
+              "api": {
+                "id": "20475195",
+                "method": "get",
+                "path": "/api/books",
+                "parameters": {},
+                "auth": {},
+                "securityScheme": {},
+                "commonParameters": {
+                  "query": [],
+                  "body": [],
+                  "cookie": [],
+                  "header": []
+                },
+                "responses": [
+                  {
+                    "id": "29676217",
+                    "code": 200,
+                    "name": "Success",
+                    "headers": [],
+                    "jsonSchema": {
+                      "type": "object",
+                      "properties": {}
+                    },
+                    "description": "",
+                    "contentType": "json",
+                    "mediaType": "",
+                    "oasExtensions": ""
+                  }
+                ],
+                "responseExamples": [],
+                "requestBody": {
+                  "type": "none",
+                  "parameters": [],
+                  "mediaType": "",
+                  "examples": [],
+                  "oasExtensions": ""
+                },
+                "description": "",
+                "tags": [],
+                "status": "developing",
+                "serverId": "",
+                "operationId": "",
+                "sourceUrl": "",
+                "ordering": 10,
+                "cases": [],
+                "mocks": [],
+                "customApiFields": "{}",
+                "advancedSettings": {
+                  "disabledSystemHeaders": {}
+                },
+                "mockScript": {},
+                "codeSamples": [],
+                "commonResponseStatus": {},
+                "responseChildren": [
+                  "BLANK.29676217"
+                ],
+                "visibility": "INHERITED",
+                "moduleId": 861104,
+                "oasExtensions": "",
+                "type": "http",
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {},
+                "inheritPreProcessors": {}
+              }
+            },
+            {
+              "name": "Get Books By Id",
+              "api": {
+                "id": "21029273",
+                "method": "get",
+                "path": "/api/books/4",
+                "parameters": {},
+                "auth": {},
+                "securityScheme": {},
+                "commonParameters": {
+                  "query": [],
+                  "body": [],
+                  "cookie": [],
+                  "header": []
+                },
+                "responses": [
+                  {
+                    "id": "30631162",
+                    "code": 200,
+                    "name": "Success",
+                    "headers": [],
+                    "jsonSchema": {
+                      "type": "object",
+                      "properties": {}
+                    },
+                    "description": "",
+                    "contentType": "json",
+                    "mediaType": "",
+                    "oasExtensions": ""
+                  }
+                ],
+                "responseExamples": [],
+                "requestBody": {
+                  "type": "none",
+                  "parameters": [],
+                  "mediaType": "",
+                  "examples": [],
+                  "oasExtensions": ""
+                },
+                "description": "",
+                "tags": [],
+                "status": "developing",
+                "serverId": "",
+                "operationId": "",
+                "sourceUrl": "",
+                "ordering": 13,
+                "cases": [],
+                "mocks": [],
+                "customApiFields": "{}",
+                "advancedSettings": {
+                  "disabledSystemHeaders": {}
+                },
+                "mockScript": {},
+                "codeSamples": [],
+                "commonResponseStatus": {},
+                "responseChildren": [
+                  "BLANK.30631162"
+                ],
+                "visibility": "INHERITED",
+                "moduleId": 861104,
+                "oasExtensions": "",
+                "type": "http",
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {},
+                "inheritPreProcessors": {}
+              }
+            },
+            {
+              "name": "Adding Book",
+              "api": {
+                "id": "21028837",
+                "method": "post",
+                "path": "/api/books",
+                "parameters": {},
+                "auth": {},
+                "securityScheme": {},
+                "commonParameters": {
+                  "query": [],
+                  "body": [],
+                  "cookie": [],
+                  "header": []
+                },
+                "responses": [
+                  {
+                    "id": "30631160",
+                    "code": 200,
+                    "name": "Success",
+                    "headers": [],
+                    "jsonSchema": {
+                      "type": "object",
+                      "properties": {}
+                    },
+                    "description": "",
+                    "contentType": "json",
+                    "mediaType": "",
+                    "oasExtensions": ""
+                  }
+                ],
+                "responseExamples": [],
+                "requestBody": {
+                  "type": "application/json",
+                  "parameters": [],
+                  "jsonSchema": {
+                    "type": "object",
+                    "properties": {}
+                  },
+                  "mediaType": "",
+                  "examples": [
+                    {
+                      "mediaType": "text/plain",
+                      "value": ""
+                    },
+                    {
+                      "mediaType": "application/json",
+                      "value": "{\r\n    \"title\": \"Negeri 5 Menara\",\r\n    \"author\": \"Ahmad Fuadi\",\r\n    \"price\": 85000,\r\n    \"genre\": \"Fiksi\"\r\n}\r\n"
+                    }
+                  ],
+                  "oasExtensions": ""
+                },
+                "description": "",
+                "tags": [],
+                "status": "developing",
+                "serverId": "",
+                "operationId": "",
+                "sourceUrl": "",
+                "ordering": 16,
+                "cases": [],
+                "mocks": [],
+                "customApiFields": "{}",
+                "advancedSettings": {
+                  "disabledSystemHeaders": {}
+                },
+                "mockScript": {},
+                "codeSamples": [],
+                "commonResponseStatus": {},
+                "responseChildren": [
+                  "BLANK.30631160"
+                ],
+                "visibility": "INHERITED",
+                "moduleId": 861104,
+                "oasExtensions": "",
+                "type": "http",
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {},
+                "inheritPreProcessors": {}
+              }
+            },
+            {
+              "name": "Adding Book Copy",
+              "api": {
+                "id": "21029275",
+                "method": "put",
+                "path": "/api/books/4",
+                "parameters": {},
+                "auth": {},
+                "securityScheme": {},
+                "commonParameters": {
+                  "query": [],
+                  "body": [],
+                  "cookie": [],
+                  "header": []
+                },
+                "responses": [
+                  {
+                    "id": "30634141",
+                    "code": 200,
+                    "name": "Success",
+                    "headers": [],
+                    "jsonSchema": {
+                      "type": "object",
+                      "properties": {}
+                    },
+                    "description": "",
+                    "contentType": "json",
+                    "mediaType": "",
+                    "oasExtensions": ""
+                  }
+                ],
+                "responseExamples": [],
+                "requestBody": {
+                  "type": "application/json",
+                  "parameters": [],
+                  "jsonSchema": {
+                    "type": "object",
+                    "properties": {}
+                  },
+                  "mediaType": "",
+                  "examples": [
+                    {
+                      "mediaType": "text/plain",
+                      "value": ""
+                    },
+                    {
+                      "mediaType": "application/json",
+                      "value": "{\r\n    \"title\": \"Atomic Habbits\"\r\n}\r\n"
+                    }
+                  ],
+                  "oasExtensions": ""
+                },
+                "description": "",
+                "tags": [],
+                "status": "developing",
+                "serverId": "",
+                "operationId": "",
+                "sourceUrl": "",
+                "ordering": 22,
+                "cases": [],
+                "mocks": [],
+                "customApiFields": "{}",
+                "advancedSettings": {
+                  "disabledSystemHeaders": {}
+                },
+                "mockScript": {},
+                "codeSamples": [],
+                "commonResponseStatus": {},
+                "responseChildren": [
+                  "BLANK.30634141"
+                ],
+                "visibility": "INHERITED",
+                "moduleId": 861104,
+                "oasExtensions": "",
+                "type": "http",
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {},
+                "inheritPreProcessors": {}
+              }
+            },
+            {
+              "name": "Adding Book Copy Copy",
+              "api": {
+                "id": "21029684",
+                "method": "delete",
+                "path": "/api/books/4",
+                "parameters": {},
+                "auth": {},
+                "securityScheme": {},
+                "commonParameters": {
+                  "query": [],
+                  "body": [],
+                  "cookie": [],
+                  "header": []
+                },
+                "responses": [
+                  {
+                    "id": "30634142",
+                    "code": 200,
+                    "name": "Success",
+                    "headers": [],
+                    "jsonSchema": {
+                      "type": "object",
+                      "properties": {}
+                    },
+                    "description": "",
+                    "contentType": "json",
+                    "mediaType": "",
+                    "oasExtensions": ""
+                  }
+                ],
+                "responseExamples": [],
+                "requestBody": {
+                  "type": "application/json",
+                  "parameters": [],
+                  "jsonSchema": {
+                    "type": "object",
+                    "properties": {}
+                  },
+                  "mediaType": "",
+                  "examples": [
+                    {
+                      "mediaType": "text/plain",
+                      "value": ""
+                    },
+                    {
+                      "mediaType": "application/json",
+                      "value": ""
+                    }
+                  ],
+                  "oasExtensions": ""
+                },
+                "description": "",
+                "tags": [],
+                "status": "developing",
+                "serverId": "",
+                "operationId": "",
+                "sourceUrl": "",
+                "ordering": 28,
+                "cases": [],
+                "mocks": [],
+                "customApiFields": "{}",
+                "advancedSettings": {
+                  "disabledSystemHeaders": {}
+                },
+                "mockScript": {},
+                "codeSamples": [],
+                "commonResponseStatus": {},
+                "responseChildren": [
+                  "BLANK.30634142"
+                ],
+                "visibility": "INHERITED",
+                "moduleId": 861104,
+                "oasExtensions": "",
+                "type": "http",
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {},
+                "inheritPreProcessors": {}
+              }
+            },
+            {
+              "name": "Get Books After Deleted",
+              "api": {
+                "id": "21029686",
+                "method": "get",
+                "path": "/api/books",
+                "parameters": {},
+                "auth": {},
+                "securityScheme": {},
+                "commonParameters": {
+                  "query": [],
+                  "body": [],
+                  "cookie": [],
+                  "header": []
+                },
+                "responses": [
+                  {
+                    "id": "30633046",
+                    "code": 200,
+                    "name": "Success",
+                    "headers": [],
+                    "jsonSchema": {
+                      "type": "object",
+                      "properties": {}
+                    },
+                    "description": "",
+                    "contentType": "json",
+                    "mediaType": "",
+                    "oasExtensions": ""
+                  }
+                ],
+                "responseExamples": [],
+                "requestBody": {
+                  "type": "none",
+                  "parameters": [],
+                  "mediaType": "",
+                  "examples": [],
+                  "oasExtensions": ""
+                },
+                "description": "",
+                "tags": [],
+                "status": "developing",
+                "serverId": "",
+                "operationId": "",
+                "sourceUrl": "",
+                "ordering": 11,
+                "cases": [],
+                "mocks": [],
+                "customApiFields": "{}",
+                "advancedSettings": {
+                  "disabledSystemHeaders": {}
+                },
+                "mockScript": {},
+                "codeSamples": [],
+                "commonResponseStatus": {},
+                "responseChildren": [
+                  "BLANK.30633046"
+                ],
+                "visibility": "INHERITED",
+                "moduleId": 861104,
+                "oasExtensions": "",
+                "type": "http",
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {},
+                "inheritPreProcessors": {}
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "socketCollection": [],
+  "docCollection": [
+    {
+      "name": "Root",
+      "moduleId": 861104,
+      "children": [],
+      "items": [
+        {
+          "id": 1394864,
+          "name": "Start your Apidog journey",
+          "sidebarTitle": "",
+          "content": "## Get started\n\n<CardGroup cols={3}>\n    <Card>\n      <img src=\"https://api.apidog.com/api/v1/projects/544525/resources/350277/image-preview\" style=\"background-color: transparent; width: 64px\"/>\n<p style=\"font-size: 24px; font-weight: 600; display: block; margin: 20px 0; line-height: 1.2;\">Introduction</p>\n\n    Learn the basic usage and fundamental knowledge of Apidog.\n        \n    - [Introduce Apidog](https://docs.apidog.com/introduce-apidog-643492m0)\n    - [Basic concepts](https://docs.apidog.com/basic-concepts-in-apidog-644342m0)\n    - [Navigating Apidog](https://docs.apidog.com/navigating-apidog-644142m0)\n    </Card>\n    <Card>\n      <img src=\"https://api.apidog.com/api/v1/projects/544525/resources/348323/image-preview\" style=\"background-color: transparent; width: 64px\"/>\n<p style=\"font-size: 24px; font-weight: 600; display: block; margin: 20px 0; line-height: 1.2;\">Quick Start</p>\n\n    Design and test your first endpoint using Apidog. [Learn more](https://docs.apidog.com/get-started-with-apidog-644404m0)\n        \n    - [Specify a new endpoint](https://docs.apidog.com/specify-a-new-endpoint-644726m0)\n    - [Send an API request](https://docs.apidog.com/make-a-request-to-the-endpoint-645415m0)\n    - [Create a test scenario](https://docs.apidog.com/create-a-test-scenario-645499m0)\n</Card>\n    <Card>\n      <img src=\"https://api.apidog.com/api/v1/projects/544525/resources/348325/image-preview\" style=\"background-color: transparent; width: 64px\"/>\n<p style=\"font-size: 24px; font-weight: 600; display: block; margin: 20px 0; line-height: 1.2;\">Tutorial Videos</p>\n\n    Guiding you step-by-step from beginner to advanced. [Learn more](https://www.youtube.com/@Apidoghq/videos)\n\n    - [Apidog for Backend](https://www.youtube.com/watch?v=XrP6UWF2cHs&list=PLIioFgXX9kneODPpUHtnh1su1JAKm7Ref&index=4)\n    - [Apidog for Frontend](https://www.youtube.com/watch?v=qIG4GtXsRNA&list=PLIioFgXX9kneODPpUHtnh1su1JAKm7Ref&index=3)\n    - [Apidog for Automated Testing](https://www.youtube.com/watch?v=42qvJn9tUJ8&list=PLIioFgXX9kneODPpUHtnh1su1JAKm7Ref&index=2)\n</Card>\n</CardGroup>\n\n## Explore Apidog\n\n<CardGroup cols={3}>    \n\n    <Card>\n\n      <img src=\"https://api.apidog.com/api/v1/projects/544525/resources/348327/image-preview\" style=\"background-color: transparent; width: 64px\"/>\n        \n<p style=\"font-size: 24px; font-weight: 600; display: block; margin: 20px 0; line-height: 1.2;\">Designing APIs</p>\n    \n    Design APIs in a powerful visual editor with JSON Schema support. [Learn more](https://docs.apidog.com/overview-533969m0)\n    - [Visual OAS design](https://docs.apidog.com/specify-an-endpoint-533932m0)\n    - [Use Schemas](https://docs.apidog.com/overview-533975m0)\n    - [Endpoint change history](https://docs.apidog.com/endpoint-change-history-539804m0)\n</Card>\n\n    <Card>\n\n      <img src=\"https://api.apidog.com/api/v1/projects/544525/resources/348328/image-preview\" style=\"background-color: transparent; width: 64px\"/>\n        \n<p style=\"font-size: 24px; font-weight: 600; display: block; margin: 20px 0; line-height: 1.2;\">Debugging APIs</p>\n\n    Simply make API requests, and auto-validate responses. [Learn more](https://docs.apidog.com/overview-541758m0)\n    - [Use Postman scripts](https://docs.apidog.com/overview-593582m0)\n    - [Validate responses](https://docs.apidog.com/validate-responses-541768m0)\n    - [Connent to databases](https://docs.apidog.com/overview-588469m0)\n</Card>\n\n    <Card>\n\n      <img src=\"https://api.apidog.com/api/v1/projects/544525/resources/348329/image-preview\" style=\"background-color: transparent; width: 64px\"/>\n\n<p style=\"font-size: 24px; font-weight: 600; display: block; margin: 20px 0; line-height: 1.2;\">Test APIs</p>\n\n    Design test scenarios with support for looping, branching and more. [Learn more](https://docs.apidog.com/overview-599176m0)\n\n    - [Visual srchestration](https://docs.apidog.com/create-a-test-scenario-599311m0)\n    - [Scheduled test tasks](https://docs.apidog.com/scheduled-tasks-603702m0)\n    - [Performance testing](https://docs.apidog.com/performance-testing-603638m0)\n</Card>\n\n    <Card>\n      <img src=\"https://api.apidog.com/api/v1/projects/544525/resources/348330/image-preview\" style=\"background-color: transparent; width: 64px\"/>\n        \n<p style=\"font-size: 24px; font-weight: 600; display: block; margin: 20px 0; line-height: 1.2;\">Mocking APIs</p>\n\nDevelop frontend features with realistic mock data before API is ready. [Learn more](https://docs.apidog.com/overview-617869m0)\n\n    - [Mock without code](https://docs.apidog.com/mock-data-automatically-618190m0)\n    - [Cloud-base mock](https://docs.apidog.com/cloud-mock-621066m0)\n    - [Custom response](https://docs.apidog.com/mock-expectations-618204m0)\n</Card>\n\n    <Card>\n\n      <img src=\"https://api.apidog.com/api/v1/projects/544525/resources/348331/image-preview\" style=\"background-color: transparent; width: 64px\"/>\n        \n<p style=\"font-size: 24px; font-weight: 600; display: block; margin: 20px 0; line-height: 1.2;\">Publish API Docs</p>\n\n    Create impactful API documentations in one click. [Learn more](https://docs.apidog.com/overview-630184m0)\n    \n    - [Generate API doc](https://docs.apidog.com/publish-docs-sites-631325m0)\n    - [Mix Markdown with API](https://docs.apidog.com/overview-630184m0)\n    - [Custom nav & domain](https://docs.apidog.com/custom-domain-631339m0)\n</Card>\n    \n    <Card>\n      <img src=\"https://api.apidog.com/api/v1/projects/544525/resources/348326/image-preview\" style=\"background-color: transparent; width: 64px\"/>\n<p style=\"font-size: 24px; font-weight: 600; display: block; margin: 20px 0; line-height: 1.2;\">Sending Requests</p>\n\n    Send HTTP/GraphQL/gRPC /WebSocket/SOAP/SSE requests. [Learn more](https://docs.apidog.com/send-requests-in-apidog-626721m0)\n\n    - [HTTP requests](https://docs.apidog.com/send-requests-in-apidog-626721m0)\n    - [GraphQL](https://docs.apidog.com/graphql-629866m0)\n    - [gRPC](https://docs.apidog.com/grpc-629868m0)\n</Card>\n\n    <Card>\n\n      <img src=\"https://api.apidog.com/api/v1/projects/544525/resources/348332/image-preview\" style=\"background-color: transparent; width: 64px\"/>\n        \n<p style=\"font-size: 24px; font-weight: 600; display: block; margin: 20px 0; line-height: 1.2;\">Branches</p>\n\n    Sprint branches enable team collaboration on different branches. [Learn more](https://docs.apidog.com/overview-616421m0)\n\n    - [Create a new branch](https://docs.apidog.com/create-a-new-sprint-branch-616420m0)\n    - [Test APIs in a branch](https://docs.apidog.com/test-apis-in-a-branch-616425m0)\n    - [Merge sprint branches](https://docs.apidog.com/merge-sprint-branches-616431m0)\n</Card>\n    <Card>\n      <img src=\"https://api.apidog.com/api/v1/projects/544525/resources/348333/image-preview\" style=\"background-color: transparent; width: 64px\"/>\n        \n<p style=\"font-size: 24px; font-weight: 600; display: block; margin: 20px 0; line-height: 1.2;\">Administration</p>\n\nManagement for organizations, teams, and permissions. [Learn more](https://docs.apidog.com/onboarding-guide-611839m0)\n    \n    - [Teams & Projects](https://docs.apidog.com/teams-projects-612997m0)\n    - [Organization & SSO](https://docs.apidog.com/overview-616325m0)\n    - [Member permissions](https://docs.apidog.com/member-permissions-settings-616186m0)\n</Card>\n    <Card>\n\n      <img src=\"https://api.apidog.com/api/v1/projects/544525/resources/348334/image-preview\" style=\"background-color: transparent; width: 64px\"/>\n        \n<p style=\"font-size: 24px; font-weight: 600; display: block; margin: 20px 0; line-height: 1.2;\">Billing</p>\n\n    Learn about Apidog's upgrade options, billing rules, and credits. [Learn more](https://docs.apidog.com/overview-616932m0)\n    \n    - [Upgrade plan](https://docs.apidog.com/upgrade-plan-617209m0)\n    - [Managing subscriptions](https://docs.apidog.com/managing-subscriptions-617217m0)\n    - [Credits](https://docs.apidog.com/credits-617133m0)\n    </Card>\n</CardGroup>\n\n## More\n\n<CardGroup cols={3}>\n    <Card>\n      <img src=\"https://api.apidog.com/api/v1/projects/544525/resources/348336/image-preview\" style=\"background-color: transparent; width: 64px\"/>\n<p style=\"font-size: 24px; font-weight: 600; display: block; margin: 20px 0; line-height: 1.2;\">Apidog On-premises</p>\n\n    Deploy the Apidog server on your own infrastructure. [Learn more](https://self-hosting.apidog.io/)\n    - [Pricing](https://apidog.com/pricing)\n    - [Install Apidog On-premises](https://self-hosting.apidog.io/)\n    - [Apply for POC](https://self-hosting.apidog.io/obtaining-apidog-on-premises-license-499618m0)\n</Card>\n    <Card>\n              <img src=\"https://api.apidog.com/api/v1/projects/544525/resources/355658/image-preview\" style=\"background-color: transparent; width: 64px\"/>\n\n<p style=\"font-size: 24px; font-weight: 600; display: block; margin: 20px 0; line-height: 1.2;\">Apidog Europe</p>\n\n        Apidog Europe stores data in Europe, in compliance with GDPR. [Learn more](https://docs.apidog.com/apidog-europe-632844m0)\n        - [Download](https://docs.apidog.com/apidog-europe-632844m0#how-to-use-apidog-eu)\n        - [GDPR Compliance](https://docs.apidog.com/apidog-europe-632844m0#gdpr-compliance)\n        - [Migrate to Apidog Europe](https://docs.apidog.com/apidog-europe-632844m0#migrate-data-from-apidog-global-to-apidog-europe)\n\n</Card>\n    <Card>\n      <img src=\"https://api.apidog.com/api/v1/projects/544525/resources/348627/image-preview\" style=\"background-color: transparent; width: 64px\"/>\n        \n<p style=\"font-size: 24px; font-weight: 600; display: block; margin: 20px 0; line-height: 1.2;\">Apidog Markdown</p>\n\n    Apidog Markdown adds elegant components and styles to native Markdown syntax. [Learn more](https://markdown.apidog.io/)\n\n    - [Introduction](https://markdown.apidog.io/)\n    - [Basic syntax](https://markdown.apidog.io/title-and-text-537648m0)\n    - [Components](https://markdown.apidog.io/admonition-537655m0)\n</Card>\n</CardGroup>",
+          "folderId": 0,
+          "type": "",
+          "tags": [],
+          "visibility": "INHERITED",
+          "moduleId": 861104
+        }
+      ]
+    }
+  ],
+  "webSocketCollection": [],
+  "socketIOCollection": [],
+  "responseCollection": [
+    {
+      "_databaseId": 1090099,
+      "updatedAt": "2025-08-21T06:36:01.000Z",
+      "name": "Root",
+      "type": "root",
+      "children": [],
+      "moduleId": 861104,
+      "parentId": 0,
+      "id": 1090099,
+      "items": [
+        {
+          "_databaseId": 3227440,
+          "name": "Record not found",
+          "moduleId": 861104,
+          "code": 404,
+          "contentType": "json",
+          "jsonSchema": {
+            "type": "object",
+            "properties": {
+              "code": {
+                "type": "integer"
+              },
+              "message": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "code",
+              "message"
+            ],
+            "x-apidog-orders": [
+              "code",
+              "message"
+            ]
+          },
+          "defaultEnable": false,
+          "folderId": 0,
+          "id": 3227440,
+          "databaseResponseExamples": [],
+          "responseExamples": []
+        }
+      ]
+    }
+  ],
+  "schemaCollection": [
+    {
+      "id": 2455915,
+      "name": "Root",
+      "visibility": "SHARED",
+      "moduleId": 861104,
+      "items": [],
+      "ordering": []
+    }
+  ],
+  "securitySchemeCollection": [
+    {
+      "id": 705337,
+      "moduleId": 861104,
+      "name": "Root",
+      "items": [
+        {
+          "id": 705336,
+          "moduleId": 861104,
+          "name": "Root",
+          "items": [
+            {
+              "id": 368081,
+              "name": "api_key",
+              "moduleId": 861104,
+              "authType": "apikey",
+              "oasAuthType": "apiKey",
+              "authConfigs": {
+                "type": "apiKey",
+                "name": "api_key",
+                "in": "header"
+              },
+              "guidanceConfigs": {}
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "requestCollection": [
+    {
+      "name": "Root",
+      "children": [],
+      "ordering": [
+        "requestFolder.7829824"
+      ],
+      "items": []
+    }
+  ],
+  "apiTestCaseCollection": [
+    {
+      "name": "Root",
+      "children": [
+        {
+          "name": "Pet Store",
+          "description": "",
+          "children": [],
+          "items": [
+            {
+              "steps": [
+                {
+                  "name": "Add a new pet to the store",
+                  "number": 1,
+                  "type": "http",
+                  "bind": false,
+                  "disable": false,
+                  "bindType": "API",
+                  "bindId": 20474548,
+                  "syncMode": "MANUAL",
+                  "httpApiCase": {
+                    "id": 29045620,
+                    "name": "Success",
+                    "method": "post",
+                    "path": "/pet",
+                    "auth": {},
+                    "type": "http",
+                    "options": {
+                      "duplicatedFrom": 28402273
+                    },
+                    "parameters": {
+                      "query": [],
+                      "header": [],
+                      "cookie": [],
+                      "path": []
+                    },
+                    "responseId": 29685266,
+                    "requestBody": {
+                      "parameters": [],
+                      "type": "application/json",
+                      "data": "{\n    \"id\": 48542782,\n    \"category\": {\n        \"id\": 8418746,\n        \"name\": \"Charlie Shields\"\n    },\n    \"name\": \"doggie\",\n    \"photoUrls\": [\n        \"https://loremflickr.com/400/400?lock=2905789514793446\",\n        \"https://loremflickr.com/400/400?lock=3851658405453453\"\n    ],\n    \"tags\": [\n        {\n            \"id\": 89174882,\n            \"name\": \"Laura Shields I\"\n        }\n    ],\n    \"status\": \"available\"\n}",
+                      "jsonSchema": {
+                        "type": "object",
+                        "x-apidog-refs": {
+                          "01K2C5EGNWZ98NXWNB634TX3D6": {
+                            "$ref": "#/definitions/3794477",
+                            "x-apidog-overrides": {
+                              "id": null
+                            }
+                          }
+                        },
+                        "x-apidog-orders": [
+                          "01K2C5EGNWZ98NXWNB634TX3D6"
+                        ],
+                        "properties": {}
+                      },
+                      "generateMode": "example"
+                    },
+                    "preProcessors": [
+                      {
+                        "type": "placeholder",
+                        "renderType": "dynamicValueDivider",
+                        "defaultEnable": false,
+                        "enable": false
+                      }
+                    ],
+                    "postProcessors": [],
+                    "advancedSettings": {
+                      "disabledSystemHeaders": {},
+                      "isDefaultUrlEncoding": 3,
+                      "disableUrlEncoding": false
+                    },
+                    "commonParameters": {
+                      "query": [],
+                      "body": [],
+                      "header": [],
+                      "cookie": []
+                    },
+                    "inheritPreProcessors": {},
+                    "inheritPostProcessors": {},
+                    "inheritPreProcessorsSnapshot": [],
+                    "inheritPostProcessorsSnapshot": [],
+                    "moduleId": 861104,
+                    "apiId": 20474548
+                  }
+                },
+                {
+                  "name": "Get the pet info just added",
+                  "number": 2,
+                  "type": "http",
+                  "bind": false,
+                  "disable": false,
+                  "bindType": "API",
+                  "bindId": 20474544,
+                  "syncMode": "MANUAL",
+                  "httpApiCase": {
+                    "id": 29045619,
+                    "name": "Pet for sale",
+                    "method": "get",
+                    "path": "/pet/{petId}",
+                    "auth": {},
+                    "type": "http",
+                    "options": {
+                      "duplicatedFrom": 28402277
+                    },
+                    "parameters": {
+                      "query": [],
+                      "header": [],
+                      "cookie": [],
+                      "path": [
+                        {
+                          "id": "petId#0",
+                          "name": "petId",
+                          "enable": true,
+                          "isDelete": false,
+                          "value": "{{$.1.response.body.id}}",
+                          "type": "integer",
+                          "description": "ID of pet to return",
+                          "relatedName": "petId"
+                        }
+                      ]
+                    },
+                    "responseId": 29685258,
+                    "requestBody": {
+                      "parameters": [],
+                      "type": "none",
+                      "data": "",
+                      "generateMode": "normal"
+                    },
+                    "preProcessors": [
+                      {
+                        "type": "placeholder",
+                        "renderType": "dynamicValueDivider",
+                        "defaultEnable": false,
+                        "enable": false
+                      }
+                    ],
+                    "postProcessors": [
+                      {
+                        "type": "assertion",
+                        "data": {
+                          "name": "Pet id found",
+                          "subject": "responseJson",
+                          "comparison": "exists",
+                          "value": "",
+                          "path": "$.id",
+                          "multipleValue": [],
+                          "extractSettings": {
+                            "expression": "$.id",
+                            "continueExtractorSettings": {
+                              "isContinueExtractValue": false,
+                              "JsonArrayValueIndexValue": ""
+                            }
+                          }
+                        },
+                        "defaultEnable": false,
+                        "enable": true
+                      }
+                    ],
+                    "advancedSettings": {
+                      "disabledSystemHeaders": {},
+                      "isDefaultUrlEncoding": 3,
+                      "disableUrlEncoding": false
+                    },
+                    "commonParameters": {
+                      "query": [],
+                      "body": [],
+                      "header": [],
+                      "cookie": []
+                    },
+                    "inheritPreProcessors": {},
+                    "inheritPostProcessors": {},
+                    "inheritPreProcessorsSnapshot": [],
+                    "inheritPostProcessorsSnapshot": [],
+                    "moduleId": 861104,
+                    "apiId": 20474544
+                  }
+                },
+                {
+                  "name": "Update the pet info",
+                  "number": 3,
+                  "type": "http",
+                  "bind": false,
+                  "disable": false,
+                  "bindType": "API",
+                  "bindId": 20474549,
+                  "syncMode": "MANUAL",
+                  "httpApiCase": {
+                    "id": 29045618,
+                    "name": "Success",
+                    "method": "put",
+                    "path": "/pet",
+                    "auth": {},
+                    "type": "http",
+                    "options": {
+                      "duplicatedFrom": 28402274
+                    },
+                    "parameters": {
+                      "query": [],
+                      "header": [],
+                      "cookie": [],
+                      "path": []
+                    },
+                    "responseId": 29685267,
+                    "requestBody": {
+                      "parameters": [],
+                      "type": "application/json",
+                      "data": "{\n    \"id\": {{$.1.response.body.id}},\n    \"status\": \"sold\"\n}",
+                      "jsonSchema": {
+                        "$ref": "#/definitions/3794477"
+                      },
+                      "generateMode": "example"
+                    },
+                    "preProcessors": [
+                      {
+                        "type": "placeholder",
+                        "renderType": "dynamicValueDivider",
+                        "defaultEnable": false,
+                        "enable": false
+                      }
+                    ],
+                    "postProcessors": [],
+                    "advancedSettings": {
+                      "disabledSystemHeaders": {},
+                      "isDefaultUrlEncoding": 3,
+                      "disableUrlEncoding": false
+                    },
+                    "commonParameters": {
+                      "query": [],
+                      "body": [],
+                      "header": [],
+                      "cookie": []
+                    },
+                    "inheritPreProcessors": {},
+                    "inheritPostProcessors": {},
+                    "inheritPreProcessorsSnapshot": [],
+                    "inheritPostProcessorsSnapshot": [],
+                    "moduleId": 861104,
+                    "apiId": 20474549
+                  }
+                },
+                {
+                  "name": "Confirm the updation",
+                  "number": 6,
+                  "type": "http",
+                  "bind": false,
+                  "disable": false,
+                  "bindType": "API",
+                  "bindId": 20474544,
+                  "syncMode": "MANUAL",
+                  "httpApiCase": {
+                    "id": 29045617,
+                    "name": "Pet for sale",
+                    "method": "get",
+                    "path": "/pet/{petId}",
+                    "auth": {},
+                    "type": "http",
+                    "options": {
+                      "duplicatedFrom": 28402277
+                    },
+                    "parameters": {
+                      "query": [],
+                      "header": [],
+                      "cookie": [],
+                      "path": [
+                        {
+                          "id": "petId#0",
+                          "name": "petId",
+                          "enable": true,
+                          "isDelete": false,
+                          "value": "{{$.1.response.body.id}}",
+                          "type": "integer",
+                          "description": "ID of pet to return",
+                          "relatedName": "petId"
+                        }
+                      ]
+                    },
+                    "responseId": 29685258,
+                    "requestBody": {
+                      "parameters": [],
+                      "type": "none",
+                      "data": "",
+                      "generateMode": "normal"
+                    },
+                    "preProcessors": [
+                      {
+                        "type": "placeholder",
+                        "renderType": "dynamicValueDivider",
+                        "defaultEnable": false,
+                        "enable": false
+                      }
+                    ],
+                    "postProcessors": [
+                      {
+                        "type": "assertion",
+                        "data": {
+                          "name": "Pet status is updated to \"sold\"",
+                          "subject": "responseJson",
+                          "comparison": "equal",
+                          "value": "sold",
+                          "path": "$.status",
+                          "multipleValue": [],
+                          "extractSettings": {
+                            "expression": "$.status",
+                            "continueExtractorSettings": {
+                              "isContinueExtractValue": false,
+                              "JsonArrayValueIndexValue": ""
+                            }
+                          }
+                        },
+                        "defaultEnable": false,
+                        "enable": true
+                      }
+                    ],
+                    "advancedSettings": {
+                      "disabledSystemHeaders": {},
+                      "isDefaultUrlEncoding": 3,
+                      "disableUrlEncoding": false
+                    },
+                    "commonParameters": {
+                      "query": [],
+                      "body": [],
+                      "header": [],
+                      "cookie": []
+                    },
+                    "inheritPreProcessors": {},
+                    "inheritPostProcessors": {},
+                    "inheritPreProcessorsSnapshot": [],
+                    "inheritPostProcessorsSnapshot": [],
+                    "moduleId": 861104,
+                    "apiId": 20474544
+                  }
+                },
+                {
+                  "name": "Deletes the pet",
+                  "number": 4,
+                  "type": "http",
+                  "bind": false,
+                  "disable": false,
+                  "bindType": "API",
+                  "bindId": 20474551,
+                  "syncMode": "MANUAL",
+                  "httpApiCase": {
+                    "id": 29045616,
+                    "name": "Success",
+                    "method": "delete",
+                    "path": "/pet/{petId}",
+                    "auth": {},
+                    "type": "http",
+                    "options": {
+                      "duplicatedFrom": 28402279
+                    },
+                    "parameters": {
+                      "query": [],
+                      "header": [
+                        {
+                          "id": "XJohHo0zVi",
+                          "relatedName": "api_key",
+                          "name": "api_key",
+                          "value": "",
+                          "type": "string",
+                          "description": "",
+                          "enable": true,
+                          "isDelete": false
+                        }
+                      ],
+                      "cookie": [],
+                      "path": [
+                        {
+                          "id": "petId#0",
+                          "name": "petId",
+                          "enable": true,
+                          "isDelete": false,
+                          "value": "{{$.1.response.body.id}}",
+                          "type": "integer",
+                          "description": "Pet id to delete",
+                          "relatedName": "petId"
+                        }
+                      ]
+                    },
+                    "responseId": 29685272,
+                    "requestBody": {
+                      "parameters": [],
+                      "type": "none",
+                      "data": "",
+                      "generateMode": "normal"
+                    },
+                    "preProcessors": [
+                      {
+                        "type": "placeholder",
+                        "renderType": "dynamicValueDivider",
+                        "defaultEnable": false,
+                        "enable": false
+                      }
+                    ],
+                    "postProcessors": [],
+                    "advancedSettings": {
+                      "disabledSystemHeaders": {},
+                      "isDefaultUrlEncoding": 3,
+                      "disableUrlEncoding": false
+                    },
+                    "commonParameters": {
+                      "query": [],
+                      "body": [],
+                      "header": [],
+                      "cookie": []
+                    },
+                    "inheritPreProcessors": {},
+                    "inheritPostProcessors": {},
+                    "inheritPreProcessorsSnapshot": [],
+                    "inheritPostProcessorsSnapshot": [],
+                    "moduleId": 861104,
+                    "apiId": 20474551
+                  }
+                },
+                {
+                  "name": "Confirm the deletion",
+                  "number": 5,
+                  "type": "http",
+                  "bind": false,
+                  "disable": false,
+                  "bindType": "API",
+                  "bindId": 20474544,
+                  "syncMode": "MANUAL",
+                  "httpApiCase": {
+                    "id": 29045615,
+                    "name": "Pet for sale",
+                    "method": "get",
+                    "path": "/pet/{petId}",
+                    "auth": {},
+                    "type": "http",
+                    "options": {
+                      "duplicatedFrom": 28402277
+                    },
+                    "parameters": {
+                      "query": [],
+                      "header": [],
+                      "cookie": [],
+                      "path": [
+                        {
+                          "id": "petId#0",
+                          "name": "petId",
+                          "enable": true,
+                          "isDelete": false,
+                          "value": "{{$.1.response.body.id}}",
+                          "type": "integer",
+                          "description": "ID of pet to return",
+                          "relatedName": "petId"
+                        }
+                      ]
+                    },
+                    "responseId": 29685258,
+                    "requestBody": {
+                      "parameters": [],
+                      "type": "none",
+                      "data": "",
+                      "generateMode": "normal"
+                    },
+                    "preProcessors": [
+                      {
+                        "type": "placeholder",
+                        "renderType": "dynamicValueDivider",
+                        "defaultEnable": false,
+                        "enable": false
+                      }
+                    ],
+                    "postProcessors": [
+                      {
+                        "type": "customScript",
+                        "data": "pm.test(\"Pet not found\", function () {\n  pm.response.to.have.status(400);\n});\n",
+                        "defaultEnable": false,
+                        "enable": true
+                      }
+                    ],
+                    "advancedSettings": {
+                      "disabledSystemHeaders": {},
+                      "isDefaultUrlEncoding": 3,
+                      "disableUrlEncoding": false
+                    },
+                    "commonParameters": {
+                      "query": [],
+                      "body": [],
+                      "header": [],
+                      "cookie": []
+                    },
+                    "inheritPreProcessors": {},
+                    "inheritPostProcessors": {},
+                    "inheritPreProcessorsSnapshot": [],
+                    "inheritPostProcessorsSnapshot": [],
+                    "moduleId": 861104,
+                    "apiId": 20474544
+                  }
+                }
+              ],
+              "id": 1372865,
+              "name": "Test CRUD pet",
+              "tags": [],
+              "options": {},
+              "priority": 2,
+              "ordering": 0,
+              "description": "",
+              "preProcessors": [],
+              "postProcessors": [],
+              "children": [],
+              "performanceTestOptions": {},
+              "apiTestDataSets": []
+            },
+            {
+              "steps": [
+                {
+                  "name": "Finds Pets by status = pending",
+                  "number": 1,
+                  "type": "http",
+                  "bind": false,
+                  "disable": false,
+                  "bindType": "API",
+                  "bindId": 20474545,
+                  "syncMode": "MANUAL",
+                  "httpApiCase": {
+                    "id": 29045621,
+                    "name": "Finds Pets by status",
+                    "method": "get",
+                    "path": "/pet/findByStatus",
+                    "auth": {
+                      "type": "securityscheme"
+                    },
+                    "type": "http",
+                    "options": {},
+                    "parameters": {
+                      "query": [
+                        {
+                          "id": "K1Jf0WMmAg",
+                          "relatedName": "status",
+                          "name": "status",
+                          "value": [
+                            "pending"
+                          ],
+                          "type": "array",
+                          "description": "Status values that need to be considered for filter",
+                          "enable": true,
+                          "isDelete": false
+                        }
+                      ],
+                      "header": [],
+                      "cookie": [],
+                      "path": []
+                    },
+                    "responseId": 29685261,
+                    "requestBody": {
+                      "parameters": [],
+                      "type": "none",
+                      "data": "",
+                      "generateMode": "normal"
+                    },
+                    "preProcessors": [
+                      {
+                        "type": "placeholder",
+                        "renderType": "dynamicValueDivider",
+                        "defaultEnable": false,
+                        "enable": false
+                      }
+                    ],
+                    "postProcessors": [],
+                    "advancedSettings": {
+                      "disabledSystemHeaders": {},
+                      "isDefaultUrlEncoding": 1
+                    },
+                    "commonParameters": {
+                      "query": [],
+                      "body": [],
+                      "header": [],
+                      "cookie": []
+                    },
+                    "inheritPreProcessors": {},
+                    "inheritPostProcessors": {},
+                    "inheritPreProcessorsSnapshot": [],
+                    "inheritPostProcessorsSnapshot": [],
+                    "moduleId": 861104,
+                    "apiId": 20474545
+                  }
+                },
+                {
+                  "id": "0a5faab8-c388-4877-8779-b5a2ff38fc90",
+                  "type": "forEach",
+                  "disable": false,
+                  "parameters": {
+                    "array": "{{$.1.response.body}}",
+                    "disableOnError": false
+                  },
+                  "children": [
+                    {
+                      "name": "Update pet status to \"sold\"",
+                      "number": 3,
+                      "type": "http",
+                      "bind": false,
+                      "disable": false,
+                      "bindType": "API",
+                      "bindId": 20474549,
+                      "syncMode": "MANUAL",
+                      "httpApiCase": {
+                        "id": 29045622,
+                        "name": "Update an existing pet",
+                        "method": "put",
+                        "path": "/pet",
+                        "auth": {
+                          "type": "securityscheme"
+                        },
+                        "type": "http",
+                        "options": {},
+                        "parameters": {
+                          "query": [],
+                          "header": [],
+                          "cookie": [],
+                          "path": []
+                        },
+                        "responseId": 29685267,
+                        "requestBody": {
+                          "parameters": [],
+                          "type": "application/json",
+                          "data": "{\n    \"id\": {{$.2.element.id}},\n    \"status\": \"sold\"\n}",
+                          "jsonSchema": {
+                            "$ref": "#/definitions/3794477"
+                          },
+                          "generateMode": "normal"
+                        },
+                        "preProcessors": [
+                          {
+                            "type": "placeholder",
+                            "renderType": "dynamicValueDivider",
+                            "defaultEnable": false,
+                            "enable": false
+                          }
+                        ],
+                        "postProcessors": [],
+                        "advancedSettings": {
+                          "disabledSystemHeaders": {},
+                          "isDefaultUrlEncoding": 1
+                        },
+                        "commonParameters": {
+                          "query": [],
+                          "body": [],
+                          "header": [],
+                          "cookie": []
+                        },
+                        "inheritPreProcessors": {},
+                        "inheritPostProcessors": {},
+                        "inheritPreProcessorsSnapshot": [],
+                        "inheritPostProcessorsSnapshot": [],
+                        "moduleId": 861104,
+                        "apiId": 20474549
+                      }
+                    }
+                  ],
+                  "isOpen": true,
+                  "number": 2
+                },
+                {
+                  "id": "25f678f8-b7fb-4ece-b44c-6783533ebd58",
+                  "type": "forEach",
+                  "disable": false,
+                  "parameters": {
+                    "array": "{{$.1.response.body}}",
+                    "disableOnError": false
+                  },
+                  "children": [
+                    {
+                      "name": "Confirm that the pet status has been changed to sold",
+                      "number": 5,
+                      "type": "http",
+                      "bind": false,
+                      "disable": false,
+                      "bindType": "API",
+                      "bindId": 20474544,
+                      "syncMode": "MANUAL",
+                      "httpApiCase": {
+                        "id": 29045623,
+                        "name": "Pet for sale",
+                        "method": "get",
+                        "path": "/pet/{petId}",
+                        "auth": {},
+                        "type": "http",
+                        "options": {
+                          "duplicatedFrom": 28402277
+                        },
+                        "parameters": {
+                          "query": [],
+                          "header": [],
+                          "cookie": [],
+                          "path": [
+                            {
+                              "id": "petId#0",
+                              "name": "petId",
+                              "value": "{{$.4.element.id}}",
+                              "type": "integer",
+                              "description": "ID of pet to return",
+                              "enable": true,
+                              "isDelete": false,
+                              "relatedName": "petId"
+                            }
+                          ]
+                        },
+                        "responseId": 29685258,
+                        "requestBody": {
+                          "parameters": [],
+                          "type": "none",
+                          "data": "",
+                          "generateMode": "normal"
+                        },
+                        "preProcessors": [
+                          {
+                            "type": "placeholder",
+                            "renderType": "dynamicValueDivider",
+                            "defaultEnable": false,
+                            "enable": false
+                          }
+                        ],
+                        "postProcessors": [
+                          {
+                            "type": "assertion",
+                            "data": {
+                              "name": "Pet updated to sold",
+                              "subject": "responseJson",
+                              "comparison": "equal",
+                              "value": "sold",
+                              "path": "$.status",
+                              "multipleValue": [],
+                              "extractSettings": {
+                                "expression": "$.status",
+                                "continueExtractorSettings": {
+                                  "isContinueExtractValue": false,
+                                  "JsonArrayValueIndexValue": ""
+                                }
+                              }
+                            },
+                            "defaultEnable": false,
+                            "enable": true
+                          }
+                        ],
+                        "advancedSettings": {
+                          "disabledSystemHeaders": {},
+                          "isDefaultUrlEncoding": 3,
+                          "disableUrlEncoding": false
+                        },
+                        "commonParameters": {
+                          "query": [],
+                          "body": [],
+                          "header": [],
+                          "cookie": []
+                        },
+                        "inheritPreProcessors": {},
+                        "inheritPostProcessors": {},
+                        "inheritPreProcessorsSnapshot": [],
+                        "inheritPostProcessorsSnapshot": [],
+                        "moduleId": 861104,
+                        "apiId": 20474544
+                      }
+                    }
+                  ],
+                  "isOpen": true,
+                  "number": 4
+                }
+              ],
+              "id": 1372866,
+              "name": "Test bulk update",
+              "tags": [],
+              "options": {},
+              "priority": 2,
+              "ordering": 10,
+              "description": "",
+              "preProcessors": [],
+              "postProcessors": [],
+              "children": [],
+              "performanceTestOptions": {},
+              "apiTestDataSets": []
+            }
+          ]
+        }
+      ],
+      "items": []
+    }
+  ],
+  "testCaseReferences": [],
+  "environments": [],
+  "commonScripts": [],
+  "databaseConnections": [],
+  "globalVariables": [],
+  "commonParameters": null,
+  "projectSetting": {
+    "id": "1044615",
+    "auth": {},
+    "securityScheme": {},
+    "gateway": [],
+    "language": "en-US",
+    "apiStatuses": [
+      "developing",
+      "testing",
+      "released",
+      "deprecated"
+    ],
+    "mockSettings": {
+      "engine": "fakerjs",
+      "defaultMockType": "smartMockFirst"
+    },
+    "preProcessors": [],
+    "postProcessors": [],
+    "advancedSettings": {
+      "enableJsonc": false,
+      "enableBigint": false,
+      "responseValidate": true,
+      "enableTestScenarioSetting": false,
+      "enableYAPICompatScript": false,
+      "isDefaultUrlEncoding": 3,
+      "publishedDocUrlRules": {
+        "defaultRule": "SLUGIFY_WITH_RESOURCE_KEY",
+        "resourceKeyStandard": "NEW"
+      }
+    },
+    "initialDisabledMockIds": [],
+    "servers": [
+      {
+        "id": "default",
+        "name": "Default Server"
+      }
+    ],
+    "cloudMock": {
+      "security": "free",
+      "enable": true,
+      "tokenKey": "apidogToken"
+    }
+  },
+  "customFunctions": [],
+  "projectTestCaseCategories": [
+    {
+      "id": 87686,
+      "name": "Positive"
+    },
+    {
+      "id": 87687,
+      "name": "Negative"
+    },
+    {
+      "id": 87688,
+      "name": "Boundary Value"
+    },
+    {
+      "id": 87689,
+      "name": "Security"
+    },
+    {
+      "id": 87690,
+      "name": "Other"
+    }
+  ],
+  "projectAssociations": []
+}

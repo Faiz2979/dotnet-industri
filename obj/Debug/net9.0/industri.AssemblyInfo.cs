@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("industri")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e7c0baaa8d55f62e5f9362f67e470ab66e7d0b31")]
 [assembly: System.Reflection.AssemblyProductAttribute("industri")]
 [assembly: System.Reflection.AssemblyTitleAttribute("industri")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
