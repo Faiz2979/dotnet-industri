@@ -1,0 +1,423 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Dotnet SMK Telkom 2025",
+    "description": "",
+    "version": "1.0.0"
+  },
+  "tags": [
+    {
+      "name": "Questions"
+    }
+  ],
+  "paths": {
+    "/questions/question-1": {
+      "get": {
+        "summary": "Question 1 - Discount calculation with error handling",
+        "deprecated": false,
+        "description": "Calculates final price after applying discount. Requires proper error handling for invalid discount values.",
+        "tags": [
+          "Questions"
+        ],
+        "parameters": [
+          {
+            "name": "discount",
+            "in": "query",
+            "description": "Discount amount as string (should be convertible to integer)",
+            "required": true,
+            "example": "a",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Question1Response"
+                }
+              }
+            },
+            "headers": {}
+          },
+          "400": {
+            "description": "Bad request - invalid discount value",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/questions/question-2": {
+      "get": {
+        "summary": "Question 2 - Null reference handling",
+        "deprecated": false,
+        "description": "Gets user initial from external source. Requires proper null handling.",
+        "tags": [
+          "Questions"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Question2Response"
+                }
+              }
+            },
+            "headers": {}
+          },
+          "400": {
+            "description": "Bad request - null user data",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/questions/question-3": {
+      "post": {
+        "summary": "Question 3 - Discount formula correction",
+        "deprecated": false,
+        "description": "Calculates discount based on percentage. Formula needs to be corrected.",
+        "tags": [
+          "Questions"
+        ],
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Question3Request"
+              },
+              "example": {
+                "price": 100,
+                "discountPercent": 100
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Question3Response"
+                }
+              }
+            },
+            "headers": {}
+          },
+          "400": {
+            "description": "Bad request - invalid input",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/questions/question-4": {
+      "post": {
+        "summary": "Question 4 - Order discount calculation",
+        "deprecated": false,
+        "description": "Calculates final price for orders with member and bulk discounts.",
+        "tags": [
+          "Questions"
+        ],
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Question4Request"
+              },
+              "example": {
+                "price": 10,
+                "quantity": 10,
+                "isMember": true
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Question4Response"
+                }
+              }
+            },
+            "headers": {}
+          },
+          "400": {
+            "description": "Bad request - invalid input",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/questions/question-5": {
+      "get": {
+        "summary": "Question 5 - Library late fee calculation",
+        "deprecated": false,
+        "description": "Calculates late fee based on number of days late.",
+        "tags": [
+          "Questions"
+        ],
+        "parameters": [
+          {
+            "name": "daysLate",
+            "in": "query",
+            "description": "Number of days the book is late",
+            "required": true,
+            "example": 5,
+            "schema": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Question5Response"
+                }
+              }
+            },
+            "headers": {}
+          },
+          "400": {
+            "description": "Bad request - invalid days late value",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Question1Response": {
+        "type": "object",
+        "properties": {
+          "originalPrice": {
+            "type": "integer",
+            "description": "Original price before discount"
+          },
+          "discount": {
+            "type": "integer",
+            "description": "Discount amount applied"
+          },
+          "finalPrice": {
+            "type": "integer",
+            "description": "Final price after discount"
+          }
+        },
+        "required": [
+          "originalPrice",
+          "discount",
+          "finalPrice"
+        ]
+      },
+      "Question2Response": {
+        "type": "object",
+        "properties": {
+          "userInitial": {
+            "type": "string",
+            "description": "User's initial letter"
+          }
+        },
+        "required": [
+          "userInitial"
+        ]
+      },
+      "Question3Request": {
+        "type": "object",
+        "properties": {
+          "price": {
+            "type": "integer",
+            "description": "Original price"
+          },
+          "discountPercent": {
+            "type": "integer",
+            "description": "Discount percentage",
+            "minimum": 0,
+            "maximum": 100
+          }
+        },
+        "required": [
+          "price",
+          "discountPercent"
+        ]
+      },
+      "Question3Response": {
+        "type": "object",
+        "properties": {
+          "originalPrice": {
+            "type": "integer",
+            "description": "Original price before discount"
+          },
+          "discount": {
+            "type": "integer",
+            "description": "Discount amount calculated"
+          },
+          "finalPrice": {
+            "type": "integer",
+            "description": "Final price after discount"
+          }
+        },
+        "required": [
+          "originalPrice",
+          "discount",
+          "finalPrice"
+        ]
+      },
+      "Question4Request": {
+        "type": "object",
+        "properties": {
+          "price": {
+            "type": "number",
+            "format": "double",
+            "description": "Price per item"
+          },
+          "quantity": {
+            "type": "integer",
+            "description": "Number of items",
+            "minimum": 1
+          },
+          "isMember": {
+            "type": "boolean",
+            "description": "Whether the customer is a member"
+          }
+        },
+        "required": [
+          "price",
+          "quantity",
+          "isMember"
+        ]
+      },
+      "Question4Response": {
+        "type": "object",
+        "properties": {
+          "originalPrice": {
+            "type": "number",
+            "format": "double",
+            "description": "Original total price before discounts"
+          },
+          "isMember": {
+            "type": "boolean",
+            "description": "Whether the customer is a member"
+          },
+          "quantity": {
+            "type": "integer",
+            "description": "Number of items ordered"
+          },
+          "finalPrice": {
+            "type": "number",
+            "format": "double",
+            "description": "Final price after all discounts"
+          }
+        },
+        "required": [
+          "originalPrice",
+          "isMember",
+          "quantity",
+          "finalPrice"
+        ]
+      },
+      "Question5Response": {
+        "type": "object",
+        "properties": {
+          "daysLate": {
+            "type": "integer",
+            "description": "Number of days late"
+          },
+          "lateFee": {
+            "type": "number",
+            "format": "double",
+            "description": "Calculated late fee"
+          }
+        },
+        "required": [
+          "daysLate",
+          "lateFee"
+        ]
+      },
+      "ErrorResponse": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "Error type"
+          },
+          "title": {
+            "type": "string",
+            "description": "Error title"
+          },
+          "status": {
+            "type": "integer",
+            "description": "HTTP status code"
+          },
+          "detail": {
+            "type": "string",
+            "description": "Error details"
+          },
+          "traceId": {
+            "type": "string",
+            "description": "Trace ID for debugging"
+          }
+        }
+      }
+    },
+    "securitySchemes": {}
+  },
+  "servers": [],
+  "security": []
+}
